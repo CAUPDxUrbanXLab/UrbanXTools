@@ -1,6 +1,7 @@
 # UrbanXTools
 
 ## **介绍**
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
 ### 1. 主要功能
 - 基于城市规划设计逻辑，借助算法设计，实现短时间内快速自动生成符合上位规划的城市设计方案；
 - 从多专业的角度，即时对城市设计方案计算并生成评估结果。

@@ -275,45 +275,20 @@
 
 > Water_InpFileToGeometry
 - **目的**：
-    - 读取inp文件并生成Rhino中的几何图形
 - **输入**：
-    - pManager.AddTextParameter("filePath", "inp", "", GH_ParamAccess.item);
-    - pManager.AddNumberParameter("tolerance", "tolr", "tolerance for simplifing the pipe links", GH_ParamAccess.item, DocumentTolerance() * 1000);
 - **输出**：
-    - pManager.AddPointParameter("Junctions", "JNodes", "", GH_ParamAccess.list);
-    - pManager.AddPointParameter("Reservoirs", "RNodes", "", GH_ParamAccess.list);
-    - pManager.AddCurveParameter("Pipes", "PLinks", "", GH_ParamAccess.list);
 - **样例展示**：
 
 > Water_CalculateSiteDemand
 - **目的**：
-    - 根据泰森多边形计算每个节点的需水量
 - **输入**：
-    - pManager.AddCurveParameter("Blocks", "curves", "Blocks of land plan", GH_ParamAccess.list);
-    - pManager.AddTextParameter("LanduseType", "type", "The type of all the landuse", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("TotalDemandByType", "demand", "The total water demand for each type", GH_ParamAccess.list);
 - **输出**：
-    - pManager.AddNumberParameter("SiteWaterDemand", "siteDemand", "The water demand for each site.(LPS)", GH_ParamAccess.list);
 - **样例展示**：
 
 > Water_NetworkOptimization
 - **目的**：
-    - 算法优化供水管网各管段参数
 - **输入**：
-    - pManager.AddPointParameter("junctions", "pts", "Jucntion nodes without water source", GH_ParamAccess.list);
-    - pManager.AddCurveParameter("links", "lks", "All the water pipelines", GH_ParamAccess.list);
-    - pManager.AddPointParameter("sources", "sources", "", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("diameters", "d", "", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("pipeCost", "c", "", GH_ParamAccess.list);
-    - pManager.AddRectangleParameter("Boundary", "box", "", GH_ParamAccess.item);
-    - pManager.AddCurveParameter("PlanSite", "polyline", "Polylines for all the site", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("SiteWaterDemand", "siteDemand", "The water demand for each site.(LPS)", GH_ParamAccess.list);
 - **输出**：
-    - pManager.AddNumberParameter("flowRate", "f", "", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("diameter", "f", "", GH_ParamAccess.list);
-    - pManager.AddCurveParameter("pathCurves", "c", "", GH_ParamAccess.list);
-    - pManager.AddCurveParameter("Cell", "c", "", GH_ParamAccess.list);
-    - pManager.AddNumberParameter("Demand", "LPS", "", GH_ParamAccess.list);
 - **样例展示**：
 
 </details>

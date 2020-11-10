@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UrbanDesign>
+
+  <BuildingParameters>
+    <R_type1 type="R" priority="11">
+      <Area>300</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>10,16</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+      <!--points list as shape of this type-->
+    </R_type1>
+
+    <R_type2 type="R" priority="12">
+      <Area>360</Area>
+      <FloorRange>3,9</FloorRange>
+      <DepthRange>12,18</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type2>
+
+    <R_type3 type="R" priority="13">
+      <Area>420</Area>
+      <FloorRange>3,15</FloorRange>
+      <DepthRange>14,20</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type3>
+
+    <R_type4 type="R" priority="14">
+      <Area>480</Area>
+      <FloorRange>6,18</FloorRange>
+      <DepthRange>14,20</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type4>
+
+    <R_type5 type="R" priority="15">
+      <Area>540</Area>
+      <FloorRange>9,33</FloorRange>
+      <DepthRange>16,21</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type5>
+
+    <R_type6 type="R" priority="16">
+      <Area>600</Area>
+      <FloorRange>12,60</FloorRange>
+      <DepthRange>16,24</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type6>
+
+    <R_type7 type="R" priority="17">
+      <Area>720</Area>
+      <FloorRange>24,150</FloorRange>
+      <DepthRange>18,26</DepthRange>
+      <FloorHeight>3.0</FloorHeight>
+    </R_type7>
+
+
+    <H_type1 type="H" priority="21">
+      <Area>1200</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>18,33</DepthRange>
+      <FloorHeight>4.2</FloorHeight>
+    </H_type1>
+
+    <H_type2 type="H" priority="22">
+      <Area>1320</Area>
+      <FloorRange>3,12</FloorRange>
+      <DepthRange>18,36</DepthRange>
+      <FloorHeight>4.2</FloorHeight>
+    </H_type2>
+
+    <H_type3 type="H" priority="23">
+      <Area>1440</Area>
+      <FloorRange>6,18</FloorRange>
+      <DepthRange>18,38</DepthRange>
+      <FloorHeight>4.2</FloorHeight>
+    </H_type3>
+
+    <H_type4 type="H" priority="24">
+      <Area>1560</Area>
+      <FloorRange>9,24</FloorRange>
+      <DepthRange>21,40</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </H_type4>
+
+    <H_type5 type="H" priority="25">
+      <Area>1680</Area>
+      <FloorRange>12,33</FloorRange>
+      <DepthRange>21,42</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </H_type5>
+
+    <H_type6 type="H" priority="26">
+      <Area>1800</Area>
+      <FloorRange>18,150</FloorRange>
+      <DepthRange>24,44</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </H_type6>
+
+
+    <O_type1 type="O" priority="31">
+      <Area>1500</Area>
+      <FloorRange>1,9</FloorRange>
+      <DepthRange>21,38</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </O_type1>
+
+    <O_type2 type="O" priority="32">
+      <Area>1700</Area>
+      <FloorRange>3,15</FloorRange>
+      <DepthRange>24,41</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </O_type2>
+
+    <O_type3 type="O" priority="33">
+      <Area>1900</Area>
+      <FloorRange>6,21</FloorRange>
+      <DepthRange>27,44</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </O_type3>
+
+    <O_type4 type="O" priority="34">
+      <Area>2100</Area>
+      <FloorRange>9,24</FloorRange>
+      <DepthRange>30,46</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </O_type4>
+
+    <O_type5 type="O" priority="35">
+      <Area>2300</Area>
+      <FloorRange>12,33</FloorRange>
+      <DepthRange>33,48</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </O_type5>
+
+    <O_type6 type="O" priority="36">
+      <Area>2500</Area>
+      <FloorRange>18,150</FloorRange>
+      <DepthRange>36,50</DepthRange>
+      <FloorHeight>3.9</FloorHeight>
+    </O_type6>
+
+
+    <C_type1 type="C" priority="41">
+      <Area>1200</Area>
+      <FloorRange>1,9</FloorRange>
+      <DepthRange>12,28</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </C_type1>
+
+    <C_type2 type="C" priority="42">
+      <Area>2400</Area>
+      <FloorRange>1,9</FloorRange>
+      <DepthRange>18,50</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </C_type2>
+
+    <C_type3 type="C" priority="43">
+      <Area>3600</Area>
+      <FloorRange>1,9</FloorRange>
+      <DepthRange>24,66</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </C_type3>
+
+
+    <M_type1 type="M" priority="50">
+      <Area>3000</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>30,54</DepthRange>
+      <FloorHeight>6.0</FloorHeight>
+    </M_type1>
+
+    <M_type2 type="M" priority="50">
+      <Area>3600</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>36,60</DepthRange>
+      <FloorHeight>6.0</FloorHeight>
+    </M_type2>
+
+    <M_type3 type="M" priority="50">
+      <Area>4200</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>42,66</DepthRange>
+      <FloorHeight>6.0</FloorHeight>
+    </M_type3>
+
+
+    <W_type1 type="W" priority="60">
+      <Area>6000</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>50,80</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </W_type1>
+
+    <W_type2 type="W" priority="60">
+      <Area>9000</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>60,100</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </W_type2>
+
+    <W_type3 type="W" priority="60">
+      <Area>12000</Area>
+      <FloorRange>1,6</FloorRange>
+      <DepthRange>90,110</DepthRange>
+      <FloorHeight>4.5</FloorHeight>
+    </W_type3>
+  
+    <GroupStyle>
+	  <MinVoidDepth>16</MinVoidDepth>
+	  <DepthRange>12,60</DepthRange>
+	  <FloorHeight>3.9</FloorHeight>
+	</GroupStyle>
+	
+  </BuildingParameters>
+
+ 
+  
+  <MainBuildingTypes>
+    <R> R_type1,R_type2,R_type3,R_type4,R_type5,R_type6,R_type7 </R>
+    <C> C_type1,C_type2,C_type3,H_type1,H_type2,H_type3,H_type4,H_type5,H_type6 </C>
+    <GIC> O_type1,O_type2,O_type3,O_type4,O_type5,O_type6 </GIC>
+    <M> M_type1,M_type2,M_type3 </M>
+    <W> W_type1,W_type2,W_type3 </W>
+  </MainBuildingTypes>
+
+
+  <MixedBuildingTypes>
+    <R> C_type1,H_type1,H_type2,H_type3</R>
+    <C> O_type1,O_type2,O_type3,O_type4,O_type5,O_type6,H_type4,H_type5,H_type6</C>
+    <GIC> C_type1,H_type1,H_type2,H_type3 </GIC>
+    <M> C_type1,O_type1,H_type1,H_type2,H_type3 </M>
+    <W> C_type1,O_type1,H_type1,H_type2,H_type3 </W>   
+  </MixedBuildingTypes>
+  
+  
+  <!--The maxsium area for each type of land-->
+  <MaxAreaByType>
+    <R> 120000 </R>
+    <C> 21000 </C>
+    <GIC> 30000 </GIC>
+    <M> 35000 </M>
+    <W> 42000 </W>
+  </MaxAreaByType>
+  
+  
+  <MixedCorCoefficients>
+    <R> 1.2 </R>
+    <C> 0.8 </C>
+    <GIC> 1.5 </GIC>
+    <M> 0.6 </M>
+    <W> 0.6 </W>  
+  </MixedCorCoefficients>
+ 
+  <FarInterval>
+    <R> 0.9,6 </R>
+    <C> 1.8,15 </C>
+    <GIC> 1.8,6 </GIC>
+    <M> 1.2,4.0 </M>
+    <W> 1.2,4.0 </W>
+  </FarInterval>
+
+  <DensityInterval>
+    <R> 0.1,0.35 </R>
+    <C> 0.2,0.6 </C>
+    <GIC> 0.2,0.35 </GIC>
+    <M> 0.4,0.65 </M>
+    <W> 0.4,0.65 </W>  
+  </DensityInterval>
+
+
+  <Setback>
+    <SetbackRtype>
+      <!--int[] represent the floor range.-->
+      <Type lo ="0" hi="3">3.0</Type>
+      <Type lo ="3" hi="33">4.5</Type>
+      <Type lo ="33" hi="3000000">6.5</Type>
+    </SetbackRtype>
+
+    <SetbackOhterType>
+      <!--int[] represent the height of building.-->
+      <Type lo ="0" hi="24">3.0</Type>
+      <Type lo ="24" hi="100">4.5</Type>
+      <Type lo ="100" hi="3000000">6.5</Type>
+    </SetbackOhterType>
+  </Setback>
+
+  <SunlightDistance>
+    <Horizontial>
+      <Height lo ="0" hi ="20" minDistance="13">1</Height>
+      <Height lo="20" hi="100" minDistance="24">0</Height>
+      <Height lo ="100" hi="3000000" minDistance ="30">0</Height>
+    </Horizontial>
+  </SunlightDistance>
+
+  <CityCoordinates>
+    <BeiJing >116.41667,39.91667</BeiJing>
+    <ShangHai>121.43333,34.50000</ShangHai>
+    <TianJin>117.20000,39.13333</TianJin>
+    <ShenZhen>114.06667,22.61667</ShenZhen>   
+  </CityCoordinates>
+  
+</UrbanDesign>

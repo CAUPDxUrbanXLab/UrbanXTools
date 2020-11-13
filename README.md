@@ -3,9 +3,9 @@
 ## **介绍**
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
 ### 1. 主要功能
-- 基于城市规划设计逻辑，借助算法设计，实现短时间内快速自动生成符合上位规划的城市设计方案；
-- 从多专业的角度，即时对城市设计方案计算并生成评估结果。
-- 为用户对城市设计方案的调整提供强有力的依据，大大减少方案评估反馈与修改之间的时间，提高设计效率；
+- 基于城市规划设计逻辑和计算机算法，快速生成符合上位规划管控指标的城市设计方案草模；
+- 基于多专业协同理念和可持续发展目标，即时对城市设计方案进行评估；
+- 依托参数化设计方法，建立控规详规与城市设计方案快速评估、反馈、修改的机制，提高设计效率与方案质量。
 ### 2. 目标
 - 高质量
 - 可持续城市发展
@@ -14,8 +14,13 @@
 ### 4. 合作单位
 - 中国城市规划设计研究院——城市设计分院
 
+Note：Rhino version ：6.30 ， Rhino model unit : meter 
+
+注意：犀牛使用版本为6.30，模型单位必须使用米，如使用毫米则无法进行方案自动生成
+
+
 ## **演示**
-### 1. 空间结构分析
+### 1. 空间结构交互性评估
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E5%8F%A5%E6%B3%95%E6%BC%94%E7%A4%BA.gif)
 
 [案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
@@ -50,65 +55,71 @@
 
 [案例: ExposureRates](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
 
-### 6. Coming Soon
 
 ## **工具内容**
 
-### 1. 设施计算
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_CoverageArea.png)
-> Facility_CoverageArea
-- **目的**：
-- **输入**：
-- **输出**：
-- **样例展示**：
+### 1. 空间句法计算
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_ToNetwork.png)
-> Facility_ToNetwork
-- **目的**：
-- **输入**：
-- **输出**：
-- **样例展示**：
-
-### 2. 空间句法计算
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearRoadsData.png)
 > Network_ClearRoadsData
+
 - **目的**：
     - 清洗和分割所有道路曲线，处理情况包括：重叠、形状相同和无效曲线。
 - **输入**：
-    - 输入待清洗、分割的道路曲线
+    - 待清洗、分割的道路曲线
 - **输出**：
-    - 输出清洗并分割完成的道路曲线
+    - 清洗并分割完成的道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearSitesData.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearRoadsData.png)
+
 > Network_ClearSitesData
+
 - **目的**：
     - 清洗所有地块曲线，处理情况包括：重叠、形状相同、非平面、非闭合地块曲线。
 - **输入**：
-    - 输入待清洗的地块曲线
+    - 待清洗的地块曲线
 - **输出**：
-    - 输出清洗完成的道路曲线
+    - 清洗完成的道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_Computing.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearSitesData.png)
+
 > Network_Computing
+
 - **目的**：
     - 计算道路网络性质，包括按米制、按角度制的空间句法，可选择不同半径进行计算
     - 介数中心性(betweenness): 在一定范围内，找出网络中任意两点的最短经，并计算每段道路被经过的次数
     - 紧密中心性(closeness): 在一定范围内，从该点到沿最短路径的指定目标点所需的平均距离
 - **输入**：
-    - 输入需要计算的路网曲线
-    - 输入计算半径
+    - 需要计算的路网曲线
+    - 计算半径
     - 是否需要标准化
 - **输出**：
-    - 输出 米制 介数中心性
-    - 输出 米制 紧密中心性
-    - 输出 角度制 介数中心性
-    - 输出 角度制 紧密中心性
+    - 米制 介数中心性
+    - 米制 紧密中心性
+    - 角度制 介数中心性
+    - 角度制 紧密中心性
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_RoadDensity.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_Computing.png)
+
+> Network_SiteAccessibility
+
+- **目的**：
+    - 计算地块可达性
+- **输入**：
+    - 地块周边路网曲线
+    - 周边路网曲线对应数值
+    - 需要计算的地块曲线
+- **输出**：
+    - 由地块曲线围合而成的地块平面
+    - 地块可达性得分
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_SiteAccessibility.png)
+
 > Network_RoadDensity
+
 - **目的**：
     - 基于特定边界，计算路网密度
 - **输入**：
@@ -120,103 +131,41 @@
     - 输出边界内容道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_SiteAccessibility.png)
-> Network_SiteAccessibility
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_RoadDensity.png)
+
+### 2. 设施计算
+
+> Facility_ToNetwork
+
 - **目的**：
-    - 计算地块可达性
+    - 计算地块几何中心，连接到周边最近路段，并将新路段添加到已有道路网络
 - **输入**：
-    - 输入地块周边路网曲线
-    - 输入周边路网曲线对应数值
-    - 输入需要计算的地块曲线
+	- 清洗处理后的路网
+	- 全部需计算地块
 - **输出**：
-    - 输出由地块曲线围合而成的地块平面
-    - 输出地块可达性得分
+  - 新建路网图结构数据，用于路网密度计算
+  - 新建路网线段几何数据
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Energy.png)
-### 3. 资源指标计算
-> Resources_Energy
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_ToNetwork.png)
+
+> Facility_CoverageArea
+
 - **目的**：
-    - 计算自生成设计方案里，每个建筑的能源消耗量
+    - 按照路网距离计算设施覆盖范围
 - **输入**：
-    - 输入Urban_SiteGeneratePlans 类
+  - 路网图结构数据，连接Facility_ToNetwork的RoadsNetwork输出端
+  - 公服设施地块，覆盖范围计算起点
+  - 公服设施覆盖半径，按照真实路网距离进行计算
 - **输出**：
-    - 输出对应楼块的能源消耗量
+  - 覆盖范围内的地块
+  - 覆盖范围内地块的几何中点
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Water.png)
-> Resources_Water
-- **目的**：
-    - 计算自生成设计方案里，每个建筑的水资源消耗量
-- **输入**：
-    - 输入Urban_SiteGeneratePlans 类
-- **输出**：
-    - 输出对应楼块的水资源消耗量
-- **样例展示**：
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_CoverageArea.png)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Garbage.png)
-> Resources_Garbage
-- **目的**：
-    - 计算自生成设计方案里，每个建筑的固废产生量
-- **输入**：
-    - 输入Urban_SiteGeneratePlans 类
-- **输出**：
-    - 输出对应楼块的固废产生量
-- **样例展示**：
+### 3. 自动生成
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_EnergyCustom.png)
-> Resources_EnergyCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的能源消耗量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的能源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_WaterCustom.png)
-> Resources_WaterCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的水资源消耗量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的水资源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_GarbageCustom.png)
-> Resources_GarbageCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的固废产生量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的固废产生量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Population.png)
-> Resources_Population
-- **目的**：
-    - 根据建筑体块，计算每个建筑的可容纳人口量
-- **输入**：
-    - 输入建筑体块
-- **输出**：
-    - 输出对应体块的容纳人口量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_ExposureRate.png)
-### 4. 空间指标计算
-> Spatial_Exposure
-- **目的**：
-    - 根据道路节点，计算建筑底商的空间曝光率，为商业选址提供空间数据支持
-- **输入**：
-    - 输入建筑体块、预设置的可视节点、是否标准化、可视半径、细分程度（该数值越高，结果越准确，计算速度越慢）
-- **输出**：
-    - 输出建筑基底轮廓线、轮廓线对应曝光率
-- **样例展示**：
-
-### 5. 自动生成
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DesignCalculator.png)
 > Urban_DesignCalculator
 - **目的**：
     - 计算在特定场地内，可容纳的建筑数量和楼层，以实现给定 FAR 和密度的目标
@@ -233,7 +182,9 @@
     - 现有地块建筑密度
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DynamicSplit.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DesignCalculator.png)
+
+
 > Urban_DynamicSplit
 - **目的**：
     - 使用Binary Partition Tree算法，基于容积率，对地块进行精确划分。
@@ -253,7 +204,9 @@
     - 输出Binary Partition Tree的可视化结果
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_ResidentialLimitations.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DynamicSplit.png)
+
+
 > Urban_ResidentialLimitation
 - **目的**：
     - 输入场地、及所在城市，计算该场地可达到的最大容积率及建筑密度
@@ -269,7 +222,9 @@
     - 输出场地可容纳的最大建筑密度
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_ResidentialLimitations.png)
+
+
 > Urban_SiteParameter
 - **目的**：
     - 基于道路、道路可达性得分及场地数据，形成自生成参数
@@ -281,7 +236,9 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameterEtra.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameter.png)
+
+
 > Urban_SiteParameterExtra
 - **目的**：
     - 调整地块参数（容积率、建筑密度等），设计参数调整功能
@@ -297,7 +254,9 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteGeneratePlan.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameterEtra.png)
+
+
 > Urban_SiteGeneratePlans
 - **目的**：
     - 基于输入参数，建筑体块方案自动生成，得到生成结果
@@ -318,25 +277,121 @@
     - 输出每个建筑对应的功能 (string)
 - **样例展示**：
 
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteGeneratePlan.png)
+
+
+### 4. 资源指标计算
+> Resources_Energy
+
+- **目的**：
+    - 计算自生成设计方案里，每个建筑的能源消耗量
+- **输入**：
+    - 输入Urban_SiteGeneratePlans 类
+- **输出**：
+    - 输出对应楼块的能源消耗量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Energy.png)
+
+
+> Resources_Water
+- **目的**：
+    - 计算自生成设计方案里，每个建筑的水资源消耗量
+- **输入**：
+    - 输入Urban_SiteGeneratePlans 类
+- **输出**：
+    - 输出对应楼块的水资源消耗量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Water.png)
+
+
+> Resources_Garbage
+- **目的**：
+    - 计算自生成设计方案里，每个建筑的固废产生量
+- **输入**：
+    - 输入Urban_SiteGeneratePlans 类
+- **输出**：
+    - 输出对应楼块的固废产生量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Garbage.png)
+
+
+> Resources_EnergyCustom
+- **目的**：
+    - 根据建筑体块及功能，计算每个建筑的能源消耗量
+- **输入**：
+    - 输入建筑体块、及其对应的建筑功能
+- **输出**：
+    - 输出对应体块的能源消耗量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_EnergyCustom.png)
+
+
+> Resources_WaterCustom
+- **目的**：
+    - 根据建筑体块及功能，计算每个建筑的水资源消耗量
+- **输入**：
+    - 输入建筑体块、及其对应的建筑功能
+- **输出**：
+    - 输出对应体块的水资源消耗量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_WaterCustom.png)
+
+> Resources_GarbageCustom
+- **目的**：
+    - 根据建筑体块及功能，计算每个建筑的固废产生量
+- **输入**：
+    - 输入建筑体块、及其对应的建筑功能
+- **输出**：
+    - 输出对应体块的固废产生量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_GarbageCustom.png)
+
+> Resources_Population
+- **目的**：
+    - 根据建筑体块，计算每个建筑的可容纳人口量
+- **输入**：
+    - 输入建筑体块
+- **输出**：
+    - 输出对应体块的容纳人口量
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Population.png)
+
+### 5. 空间指标计算
+> Spatial_Exposure
+- **目的**：
+    - 根据道路节点，计算建筑底商的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入建筑体块、预设置的可视节点、是否标准化、可视半径、细分程度（该数值越高，结果越准确，计算速度越慢）
+- **输出**：
+    - 输出建筑基底轮廓线、轮廓线对应曝光率
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_ExposureRate.png)
+
+
 ### 6. 水管网计算（Coming Soon）
 <details>
 <summary>水管网计算具体参数</summary>
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Water_InpFiletoGeomerty.png)
 > Water_InpFileToGeometry
 - **目的**：
 - **输入**：
 - **输出**：
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Water_CalculateSiteDemand.png)
 > Water_CalculateSiteDemand
 - **目的**：
 - **输入**：
 - **输出**：
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Water_NetworkOptimization.png)
 > Water_NetworkOptimization
 - **目的**：
 - **输入**：

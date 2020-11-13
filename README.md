@@ -18,6 +18,44 @@ Note：Rhino version ：6.30 ， Rhino model unit : meter
 
 注意：犀牛使用版本为6.30，模型单位必须使用米，如使用毫米则无法进行方案自动生成
 
+## **安装步骤**
+### 1. 从github里下载文件，并解压，取出
+
+- 下载文件
+
+![image]()
+
+- 取出文件夹：UrbanXTools_v.1.0.0
+
+![image]()
+
+### 2. 打开Rhino，打开Grasshopper，进入Component File
+
+- 打开Rhino，打开Grasshopper，点击 File --> Special Folders --> Components Folder 
+
+![image]()
+
+- 将文件夹：UrbanXTools_v.1.0.0 置入
+
+![image]()
+
+### 3. 检查文件夹内容完整性，重启Rhino
+
+- 确保文件夹里，有如下文件
+
+![image]()
+
+### 4. 顺利置入
+
+- 如顺利置入，界面如下
+
+![image]()
+
+### 5. 注意：
+- 犀牛使用版本为6.30，Grasshopper版本为1.0.0007
+- 如有问题，也可在github issue里提出，开发者会尽力解决
+- 如有低版本需求，可在github issue里提出。开发者会尝试低版本，如无问题，将重新发布一版
+
 
 ## **演示**
 ### 1. 空间结构交互性评估

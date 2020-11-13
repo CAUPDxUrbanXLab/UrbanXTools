@@ -1,6 +1,6 @@
 # UrbanXTools
 
-- [UrbanXTools](#urbanxtools)
+- [目录结构](#目录结构)
   * [**介绍**](#------)
     + [1. 主要功能](#1-----)
     + [2. 目标](#2---)
@@ -27,8 +27,6 @@
     + [6. 水管网计算（Coming Soon）](#6-------coming-soon-)
   * [**许可证**](#-------)
     + [***GNU General Public License v.3***](#---gnu-general-public-license-v3---)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ## **介绍**

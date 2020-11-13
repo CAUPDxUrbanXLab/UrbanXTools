@@ -37,7 +37,6 @@ Note：Rhino version ：6.30 ， Rhino model unit : meter
 
 - 将文件夹：UrbanXTools_v.1.0.0 置入
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003_1.png)
 
 ### 3. 检查文件夹内容完整性，重启Rhino
 

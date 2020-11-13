@@ -31,6 +31,7 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E4%BD%8F%E5%AE%85%E8%A1%8C%E5%88%97%E5%BC%8F%2B%E7%82%B9%E5%BC%8F.gif)
 
 - 商业+仓储+工厂
+
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E5%95%86%E4%B8%9A%2B%E4%BB%93%E5%82%A8%2B%E5%B7%A5%E5%8E%82.gif)
 
 [案例: UrbanDesign SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
@@ -38,11 +39,14 @@
 [案例: UrbanDesign_MultiSitesSites](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
 ### 4. 城市设计方案资源荷载计算
+
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
+
 [案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
 ### 5. 城市设计方案曝光度分析
-![image]()
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
 
 [案例: ExposureRates](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
 

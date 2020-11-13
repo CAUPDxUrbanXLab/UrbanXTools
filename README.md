@@ -10,7 +10,7 @@
 - 高质量
 - 可持续城市发展
 ### 3. 参与人员
-- 杨滔、罗维祯、林旭辉、邓成汝
+- 杨滔、罗维祯、林旭辉、邓成汝、董雨菲
 ### 4. 合作单位
 - 中国城市规划设计研究院——城市设计分院
 
@@ -18,12 +18,12 @@
 ### 1. 空间结构分析
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E5%8F%A5%E6%B3%95%E6%BC%94%E7%A4%BA.gif)
 
-[案例](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+[案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
 ### 2. 公共服务设施覆盖分析
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%85%AC%E6%9C%8D%E8%A6%86%E7%9B%96%E6%BC%94%E7%A4%BA.gif)
 
-[案例](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
 
 ### 3. 城市设计方案自动生成
 - 住宅行列式+点式
@@ -33,16 +33,18 @@
 - 商业+仓储+工厂
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E5%95%86%E4%B8%9A%2B%E4%BB%93%E5%82%A8%2B%E5%B7%A5%E5%8E%82.gif)
 
-[案例](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+[案例: UrbanDesign SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
+
+[案例: UrbanDesign_MultiSitesSites](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
 ### 4. 城市设计方案资源荷载计算
-![image]()
-[案例](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
+[案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
 ### 5. 城市设计方案曝光度分析
 ![image]()
 
-[案例](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+[案例: ExposureRates](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
 
 ### 6. Coming Soon
 
@@ -188,7 +190,7 @@
     - 输出对应体块的固废产生量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Population.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Population.png)
 > Resources_Population
 - **目的**：
     - 根据建筑体块，计算每个建筑的可容纳人口量
@@ -198,7 +200,7 @@
     - 输出对应体块的容纳人口量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Exposure.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_ExposureRate.png)
 ### 4. 空间指标计算
 > Spatial_Exposure
 - **目的**：
@@ -247,7 +249,7 @@
     - 输出Binary Partition Tree的可视化结果
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_ResidentialLimitation.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_ResidentialLimitations.png)
 > Urban_ResidentialLimitation
 - **目的**：
     - 输入场地、及所在城市，计算该场地可达到的最大容积率及建筑密度
@@ -275,7 +277,7 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameterExtra.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameterEtra.png)
 > Urban_SiteParameterExtra
 - **目的**：
     - 调整地块参数（容积率、建筑密度等），设计参数调整功能
@@ -291,7 +293,7 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteGeneratePlans.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteGeneratePlan.png)
 > Urban_SiteGeneratePlans
 - **目的**：
     - 基于输入参数，建筑体块方案自动生成，得到生成结果
@@ -316,7 +318,7 @@
 <details>
 <summary>水管网计算具体参数</summary>
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Water_InpFileToGeometry.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Water_InpFiletoGeomerty.png)
 > Water_InpFileToGeometry
 - **目的**：
 - **输入**：

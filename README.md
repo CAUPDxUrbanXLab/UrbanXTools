@@ -2,15 +2,14 @@
 
 
 - [目录](#目录)
-  * [**介绍**](#------)(#jump)
+  * [**介绍**](#------)
   * [**安装步骤**](#--------)
   * [**演示**](#------)
   * [**工具内容**](#--------)
   * [**许可证**](#-------)
-    + [***GNU General Public License v.3***](#---gnu-general-public-license-v3---)
 
 
-## <span id="jump">**介绍**</span>
+## **介绍**
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
 ### 1. 主要功能
 - 基于城市规划设计逻辑和计算机算法，快速生成符合上位规划管控指标的城市设计方案草模；

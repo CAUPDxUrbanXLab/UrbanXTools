@@ -23,33 +23,33 @@ Note：Rhino version ：6.30 ， Rhino model unit : meter
 
 - 下载文件
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_001.png)
 
 - 取出文件夹：UrbanXTools_v.1.0.0
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_002.png)
 
 ### 2. 打开Rhino，打开Grasshopper，进入Component File
 
 - 打开Rhino，打开Grasshopper，点击 File --> Special Folders --> Components Folder 
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003.png)
 
 - 将文件夹：UrbanXTools_v.1.0.0 置入
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003_1.png)
 
 ### 3. 检查文件夹内容完整性，重启Rhino
 
 - 确保文件夹里，有如下文件
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_004.png)
 
 ### 4. 顺利置入
 
 - 如顺利置入，界面如下
 
-![image]()
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_005.png)
 
 ### 5. 注意：
 - 犀牛使用版本为6.30，Grasshopper版本为1.0.0007

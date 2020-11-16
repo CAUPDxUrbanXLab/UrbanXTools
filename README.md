@@ -75,7 +75,7 @@ Note：Rhino version ：6.30（recommended） ， Rhino model unit : meter
 
 ## **演示**
 ### 1. 空间结构交互性评估
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E5%8F%A5%E6%B3%95%E6%BC%94%E7%A4%BA.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84%E8%AE%A1%E7%AE%97%E6%BC%94%E7%A4%BA.gif)
 
 [案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
@@ -112,7 +112,7 @@ Note：Rhino version ：6.30（recommended） ， Rhino model unit : meter
 
 ## **工具内容**
 
-### 1. 空间句法计算
+### 1. 空间结构分析
 
 > Network_ClearRoadsData
 

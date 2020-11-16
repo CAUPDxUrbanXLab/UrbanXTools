@@ -24,16 +24,22 @@
 ### 4. 合作单位
 - 中国城市规划设计研究院——城市设计分院
 
-Note：Rhino version ：6.30 ， Rhino model unit : meter 
+Note：Rhino version ：6.30（recommended） ， Rhino model unit : meter 
 
-注意：犀牛使用版本为6.30，模型单位必须使用米，如使用毫米则无法进行方案自动生成
+注意：犀牛使用版本为6.30（推荐），模型单位必须使用米，如使用毫米则无法进行方案自动生成
 
 ## **安装步骤**
-### 1. 从github里下载文件，并解压，取出
+### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出
 
-- 下载文件
+- 点击进入Release界面
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_001.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
+
+- 进入Release界面
+	- 如Rhino版本 **高于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.30.zip
+	- 如Rhino版本 **低于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.12.zip
+	
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 
 - 取出文件夹：UrbanXTools_v.1.0.0
 

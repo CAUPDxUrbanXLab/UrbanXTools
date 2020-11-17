@@ -19,14 +19,15 @@
 ### 2. 目标
 - 高质量
 - 可持续城市发展
-### 3. 参与人员
+### 3. 研发人员
 - 杨滔、罗维祯、林旭辉、邓成汝、董雨菲
 ### 4. 合作单位
 - 中国城市规划设计研究院——城市设计分院
-
-Note：Rhino version ：6.30（recommended） ， Rhino model unit : meter 
-
-注意：犀牛使用版本为6.30（推荐），模型单位必须使用米，如使用毫米则无法进行方案自动生成
+### 5. 注意事项
+- 推荐使用Rhino version 6.30 ， 如使用Rhino版本低于6.30， 请于release下载v6.12插件；
+- 模型单位必须使用米（model unit: meter），如使用毫米则无法进行方案自动生成；
+- 如方案距离工作视图原点较远时，由于Rhinocommon几何运算精度限制，几何布尔运算有一定概率出现问题，因此请将路网地块等几何数据移动至原点（0，0，0）附近；
+- 如有运行问题或功能需求，可在github issue里提出，开发者会尽力解决。
 
 ## **安装步骤**
 ### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出
@@ -67,10 +68,7 @@ Note：Rhino version ：6.30（recommended） ， Rhino model unit : meter
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_005.png)
 
-### 5. 注意
-- 犀牛使用版本为6.30，Grasshopper版本为1.0.0007
-- 如有问题，也可在github issue里提出，开发者会尽力解决
-- 如有低版本需求，可在github issue里提出。开发者会尝试低版本，如无问题，将重新发布一版
+
 
 
 ## **演示**

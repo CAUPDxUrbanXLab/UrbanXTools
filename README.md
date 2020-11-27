@@ -30,6 +30,12 @@
 - 如有运行问题或功能需求，可在github issue里提出，开发者会尽力解决。
 
 ## **安装步骤**
+- 下载链接：
+	- 百度网盘
+		- 链接：https://pan.baidu.com/s/13rRFRp7XDrKbNrWu3ZOQbg
+		- 密码：uzi7
+	- Github下载链接
+		- 链接：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases
 ### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出
 
 - 点击进入Release界面

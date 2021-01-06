@@ -34,8 +34,8 @@
 	- 蓝奏云盘
 		- 链接：https://wws.lanzous.com/iWyYoiu0d7i
 	- 百度网盘
-		- 链接：https://pan.baidu.com/s/13rRFRp7XDrKbNrWu3ZOQbg
-		- 密码：uzi7
+		- 链接：https://pan.baidu.com/s/1SQBV8y8OTcrzpW5uOUZvsg
+		- 密码：yu6t
 	- Github下载
 		- 链接：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases
 ### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出

@@ -45,8 +45,9 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
 
 - 进入Release界面
-	- 如Rhino版本 **高于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.30.zip
-	- 如Rhino版本 **低于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.12.zip
+	- 完全版：推荐选择 UrbanXTools_v1.0.0（已经包含以下多种版本）
+	- 简略版：如Rhino版本 **高于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.30.zip
+	- 简略版：如Rhino版本 **低于** 6.30，可选择 UrbanXTools_v.1.0.0_V6.12.zip
 	
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 

@@ -32,7 +32,7 @@
 ## **安装步骤**
 - 下载链接：
 	- 蓝奏云盘
-		- 链接：https://wws.lanzous.com/iWyYoiu0d7i
+		- 链接：https://wws.lanzous.com/ipN1Kkfnqmb
 	- 百度网盘
 		- 链接：链接：https://pan.baidu.com/s/1tI0uMAAqK_T1FlN471ksFg
 		- 密码：d3y6

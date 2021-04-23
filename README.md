@@ -110,11 +110,17 @@
 
 [案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
-### 5. 城市设计方案曝光度分析
+### 5. 城市设计方案曝光度分析2D
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
 
-[案例: ExposureRates](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
+[案例: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
+
+### 6. 城市设计方案曝光度分析3D
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+
+[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 
 ## **工具内容**
@@ -425,7 +431,7 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Population.png)
 
 ### 5. 空间指标计算
-> Spatial_Exposure
+> Spatial_Analysis_Exposure2D
 - **目的**：
     - 根据道路节点，计算建筑底商的空间曝光率，为商业选址提供空间数据支持
 - **输入**：
@@ -434,7 +440,29 @@
     - 输出建筑基底轮廓线、轮廓线对应曝光率
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_ExposureRate.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_ExposureRate2D.png)
+
+> Spatial_Analysis_GenerateMesh
+- **目的**：
+    - 根据可视点选择，计算建筑三维体块的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入建筑体块、细分程度（该数值越高，结果越准确，计算速度越慢）
+- **输出**：
+    - 输出GenerateMesh Class（包含建筑Mesh面，建筑立面面积，建筑中心点）
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_GenerateMesh.png)
+
+> Spatial_Analysis_Exposure3D
+- **目的**：
+    - 根据可视点选择，计算建筑三维体块的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入预设置的可视节点、GenerateMesh Class、横轴细分程度（默认为10）、纵轴细分程度（默认为40）、视角范围（默认为200）、视角高度（默认为45）（该数值越高，结果越准确，计算速度越慢）
+- **输出**：
+    - 输出建筑Mesh面（已染色），可视点对应的可视率
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_ExposureRate3D.png)
 
 
 ### 6. 水管网计算（Coming Soon）

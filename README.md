@@ -26,9 +26,10 @@
  - Normalized angular choice(NACH)
  - Normalized angular integration(NAIN)
 2. NA_GeneratingSites：新增根据不同等级路网生成地块的工具。
-3. NA_ClearRoadsData 更名为NA_RoadsSplitter，且使用NA_Computing前不再强制需要使用此工具。此工具在寻找曲线交点时，使用IntervalTree的数据结构和相应算法，替代暴力算法，加快速度。 
-4. Spatial_Analysis_GenerateMesh：几何数据转换
-5. Spatial_Analysis_Exposure3D：三维视线分析
+3. NA_ClearRoadsData：更名为NA_RoadsSplitter
+   且使用NA_Computing前不再强制需要使用此工具。此工具在寻找曲线交点时，使用IntervalTree的数据结构和相应算法，替代暴力算法，加快速度。 
+5. Spatial_Analysis_GenerateMesh：几何数据转换
+6. Spatial_Analysis_Exposure3D：三维视线分析
 
 ## **介绍**
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)

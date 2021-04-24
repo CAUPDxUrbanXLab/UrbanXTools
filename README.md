@@ -32,9 +32,10 @@
 ## **安装步骤**
 - 下载链接：
 	- 蓝奏云盘
-		- 链接：https://wws.lanzous.com/ipN1Kkfnqmb
+		- 链接：https://wwe.lanzous.com/b01tqy68f
+		- 密码:h5d8
 	- 百度网盘
-		- 链接：链接：https://pan.baidu.com/s/1Bkl0HBBNNevcUSm3aFa4nA 
+		- 链接：https://pan.baidu.com/s/1Bkl0HBBNNevcUSm3aFa4nA 
 		- 密码：koff
 	- Github下载
 		- 链接：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases

@@ -16,7 +16,7 @@
  - **新增计算指标**
  - **将路网清洗（合并、去重、打断等）流程内置。**
    
-   现有如下计算指标：
+   *现有如下计算指标：*
  - Metric choice
  - Metric integration
  - Metric mean depth

@@ -16,19 +16,19 @@
  - **新增计算指标**
  - **将路网清洗（合并、去重、打断等）流程内置。**
    
-   *现有如下计算指标：*
- - Metric choice
- - Metric integration
- - Metric mean depth
- - Metric total depth
+   **现有如下计算指标：**
+ - *Metric choice*
+ - *Metric integration*
+ - *Metric mean depth*
+ - *Metric total depth*
  
- - Angular choice
- - Angular integration
- - Angular mean depth
- - Angular total depth
+ - *Angular choice*
+ - *Angular integration*
+ - *Angular mean depth*
+ - *Angular total depth*
  
- - Normalized angular choice(NACH)
- - Normalized angular integration(NAIN)
+ - *Normalized angular choice(NACH)*
+ - *Normalized angular integration(NAIN)*
 #### **2. NA_GeneratingSites**
  - **新增根据不同等级路网生成地块的工具。**
 #### **3. NA_ClearRoadsData**

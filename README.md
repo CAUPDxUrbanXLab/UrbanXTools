@@ -144,13 +144,13 @@
 
 ### 7. 城市设计方案曝光度分析3D_Mesh
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
 
-[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+[案例: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 ### 8. 城市设计方案视觉图结构计算
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/VisSyntax.png)
 
 [案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
@@ -194,10 +194,18 @@
     - 计算半径
     - 是否需要标准化
 - **输出**：
-    - 米制 介数中心性
-    - 米制 紧密中心性
-    - 角度制 介数中心性
-    - 角度制 紧密中心性
+	 - Metric choice
+	 - Metric integration
+	 - Metric mean depth
+	 - Metric total depth
+
+	 - Angular choice
+	 - Angular integration
+	 - Angular mean depth
+	 - Angular total depth
+ 
+	 - Normalized angular choice(NACH)
+	 - Normalized angular integration(NAIN)
 - **样例展示**：
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_Computing.png)
@@ -520,22 +528,27 @@
 
 > Spatial_VisualCalc
 - **目的**：
-    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
+    - 根据输入路网，计算路网的空间可视率（通过路网细分点进行计算）
 - **输入**：
-    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
+    - 输入预设置的路网、GenerateMesh Class、路网细分程度、视角范围（默认为300）、是否输出Mesh
 - **输出**：
-    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
+    - 输出路网的可视相关数值、位于路网上的点、路网对应的可视率、Mesh面（取决于是否选择输出Mesh）
 - **样例展示**：
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualCalc.png)
 
 > Spatial_VisualSyntaxCompute
 - **目的**：
-    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
+    - 根据输入路网，及路网对应数值，计算路网的可视网络结构
 - **输入**：
-    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
+    - 输入预设置的路网、路网对应得分、计算半径（默认为-1，即计算全局路网）
 - **输出**：
-    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
+    - visual total depth
+    - visual mean depth
+    - visual integration
+    - visual choice
+    - normalised visual integration
+    - normalised visual choice
 - **样例展示**：
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualSyntaxCompute.png)

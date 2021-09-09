@@ -52,14 +52,14 @@
 ## **安装步骤**
 - 下载链接：
 	- 蓝奏云盘
-		- 链接：https://wwe.lanzous.com/b01tqy68f
-		- 密码:h5d8
+		- 链接：https://wwe.lanzoui.com/iH4Xuttd7ha
+		- 密码: du8d
 	- 百度网盘
-		- 链接：https://pan.baidu.com/s/1Bkl0HBBNNevcUSm3aFa4nA 
-		- 密码：koff
+		- 链接：链接：https://pan.baidu.com/s/1acBnxjOD2pCm4wnlYHIOzg  
+		- 密码：gz4u
 	- Github下载
 		- 链接：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases
-### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出
+### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出(版本号以最新版为准)
 
 - 点击进入Release界面
 

@@ -54,11 +54,11 @@
 <Buildings>
   <!--建筑向包含数据 单位：平方米-->
   <Building Type="R">
-    <!-- 单位：千瓦/平方米-->
+    <!-- 单位：kw/m2-->
     <EConsumption>0.02,0.04</EConsumption>
-    <!-- 单位：吨/平方米-->
+    <!-- 单位：kg/m2  d-->
     <WConsumption>6,8</WConsumption>
-    <!-- 只能按人口算 单位：千克/人-->
+    <!-- 只能按人口算 单位：kg/d/p-->
     <GConsumption>1.0,1.5</GConsumption>
   </Building>
   <Building Type="C">

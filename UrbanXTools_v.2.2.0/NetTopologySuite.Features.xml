@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetTopologySuite.Features</name>
+    </assembly>
+    <members>
+        <member name="T:NetTopologySuite.Features.AttributesTable">
+            <summary>
+            Stores all attributes associated with a single <c>Geometry</c> feature.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.AttributesTable.AddAttributeWithIndexer">
+            <summary>
+            Gets or sets a value indicating if setting <see cref="P:NetTopologySuite.Features.AttributesTable.Item(System.String)"/> with a
+            nonexistant index will throw an exception or if the attribute/value pair will
+            silently be added.
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor">
+            <summary>
+            Creates an instance of this class using the default equality comparer for names.
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.IEqualityComparer{System.String})">
+            <summary>
+            Creates an instance of this class using the given equality comparer for names.
+            </summary>
+            <param name="nameComparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> to use for comparing names, or <see langword="null"/> to use the default.</param>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            Creates an instance of this class using the provided enumeration of key/value pairs and
+            the default equality comparer for names.
+            </summary>
+            <param name="attributes">An enumeration of key/value pairs</param>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},System.Collections.Generic.IEqualityComparer{System.String})">
+            <summary>
+            Creates an instance of this class using the provided enumeration of key/value pairs and
+            the given equality comparer for names.
+            </summary>
+            <param name="attributes">An enumeration of key/value pairs</param>
+            <param name="nameComparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> to use for comparing names, or <see langword="null"/> to use the default.</param>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates an instance of this class using the provided enumeration of key/value pairs
+            </summary>
+            <param name="attributes">An attributes dictionary</param>
+            <exception cref="T:System.ArgumentNullException">If the attributes are null</exception>
+        </member>
+        <member name="P:NetTopologySuite.Features.AttributesTable.Count">
+            <inheritdoc />
+        </member>
+        <member name="P:NetTopologySuite.Features.AttributesTable.Item(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.GetNames">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.GetValues">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.Exists(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.DeleteAttribute(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.GetType(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.MergeWith(NetTopologySuite.Features.IAttributesTable,System.Boolean)">
+            <summary>
+            Method to merge this attribute table with another attribute table
+            </summary>
+            <param name="other">The other attribute table</param>
+            <param name="preferThis">A value indicating if values in this attribute table are preferable
+            over those in <paramref name="other"/>.  The default is <value>true</value>.
+            </param>
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.Add(System.String,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.GetOptionalValue(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:NetTopologySuite.Features.AttributesTable.GetEnumerator">
+            <inheritdoc cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />
+        </member>
+        <member name="T:NetTopologySuite.Features.Feature">
+            <summary>
+             Standard implementation of <see cref="T:NetTopologySuite.Features.IFeature"/>.
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.Feature.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NetTopologySuite.Features.Feature"/> class.
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.Feature.#ctor(NetTopologySuite.Geometries.Geometry,NetTopologySuite.Features.IAttributesTable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NetTopologySuite.Features.Feature"/> class.
+            </summary>
+            <param name="geometry">The geometry</param>
+            <param name="attributes">The attributes</param>
+        </member>
+        <member name="P:NetTopologySuite.Features.Feature.ComputeBoundingBoxWhenItIsMissing">
+            <summary>
+            Gets or sets a value indicating how bounding box on <see cref="T:NetTopologySuite.Features.Feature"/> should be handled
+            </summary>
+            <remarks>Default is <value>false</value></remarks>
+        </member>
+        <member name="P:NetTopologySuite.Features.Feature.Geometry">
+            <inheritdoc />
+        </member>
+        <member name="P:NetTopologySuite.Features.Feature.Attributes">
+            <inheritdoc />
+        </member>
+        <member name="P:NetTopologySuite.Features.Feature.BoundingBox">
+            <inheritdoc />
+        </member>
+        <member name="T:NetTopologySuite.Features.FeatureCollection">
+            <summary>
+             Represents a feature collection.
+            </summary>
+        </member>
+        <member name="F:NetTopologySuite.Features.FeatureCollection._boundingBox">
+            <summary>
+            The bounding box of this <see cref="T:NetTopologySuite.Features.FeatureCollection"/>
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.FeatureCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NetTopologySuite.Features.FeatureCollection"/> class.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.FeatureCollection.BoundingBox">
+            <summary>
+            Gets or sets the (optional) <see href="http://geojson.org/geojson-spec.html#geojson-objects"> Bounding box (<c>bbox</c>) Object</see>.
+            </summary>
+            <value>
+            A <see cref="T:NetTopologySuite.Geometries.Envelope"/> describing the bounding box or <see langword="null"/>.
+            </value>
+        </member>
+        <member name="M:NetTopologySuite.Features.FeatureCollection.ComputeBoundingBox">
+            <summary>
+            Function to compute the bounding box (when it isn't set)
+            </summary>
+            <returns>A bounding box for this <see cref="T:NetTopologySuite.Features.FeatureCollection"/></returns>
+        </member>
+        <member name="T:NetTopologySuite.Features.FeatureExtensions">
+            <summary>
+            Defines extensions for <see cref="T:NetTopologySuite.Features.IFeature"/>.
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.FeatureExtensions.GetOptionalId(NetTopologySuite.Features.IFeature,System.String)">
+            <summary>
+            Gets an ID value from this <see cref="T:NetTopologySuite.Features.IFeature"/>, using its <see cref="P:NetTopologySuite.Features.IUnique.Id"/>
+            property if it happens to implement that interface (otherwise, searching through its
+            <see cref="P:NetTopologySuite.Features.IFeature.Attributes"/> looking for an attribute with a specified name).
+            </summary>
+            <param name="feature">
+            The <see cref="T:NetTopologySuite.Features.IFeature"/> whose ID to get.
+            </param>
+            <param name="idPropertyName">
+            The name of the attribute to look for in <see cref="P:NetTopologySuite.Features.IFeature.Attributes"/>, if the
+            <paramref name="feature"/> is not an instance of <see cref="T:NetTopologySuite.Features.IUnique"/>.
+            </param>
+            <returns>
+            The ID value, or <see langword="null"/> if this instance has no ID.
+            </returns>
+        </member>
+        <member name="T:NetTopologySuite.Features.IAttributesTable">
+            <summary>
+            Interface definition for an object capable of storing <see cref="T:NetTopologySuite.Features.IFeature"/>'s attribute data
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.Add(System.String,System.Object)">
+            <summary>
+            Method to add the attribute &quot;<paramref name="attributeName"/>&quot; from the attribute table.
+            </summary>
+            <param name="attributeName">The name (or key) of the attribute</param>
+            <param name="value"></param>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.DeleteAttribute(System.String)">
+            <summary>
+            Method to delete the attribute &quot;<paramref name="attributeName"/>&quot; from the attribute table.
+            </summary>
+            <param name="attributeName">The name (or key) of the attribute</param>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.GetType(System.String)">
+            <summary>
+            Function to query the <see cref="T:System.Type"/> of the Attribute &quot;<paramref name="attributeName"/>&quot;
+            </summary>
+            <param name="attributeName">The name (or key) of the attribute</param>
+            <returns>The <see cref="T:System.Type"/> of the specified attribute</returns>
+        </member>
+        <member name="P:NetTopologySuite.Features.IAttributesTable.Item(System.String)">
+            <summary>
+            Gets or sets the attribute value for the specified <paramref name="attributeName"/>.
+            </summary>
+            <param name="attributeName">The name (or key) of the attribute</param>
+            <returns>The attribute value</returns>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.Exists(System.String)">
+            <summary>
+            Function to verify if attribute data for the specified <paramref name="attributeName"/> does exist.
+            </summary>
+            <param name="attributeName">The name of the attribute</param>
+            <returns><value>true</value> if the attribute data exists, otherwise false.</returns>
+        </member>
+        <member name="P:NetTopologySuite.Features.IAttributesTable.Count">
+            <summary>
+            Gets a value indicating the number of attributes
+            </summary>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.GetNames">
+            <summary>
+            Function to retrieve the names (or keys) of the feature's attributes
+            </summary>
+            <returns>
+            Returns an array of <see cref="T:System.String"/> values
+            </returns>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.GetValues">
+            <summary>
+            Function to retrieve the attribute data of the feature
+            </summary>
+            <returns>
+            Returns an array of <see cref="T:System.Object"/> values
+            </returns>
+        </member>
+        <member name="M:NetTopologySuite.Features.IAttributesTable.GetOptionalValue(System.String)">
+            <summary>
+            Gets the value associated with the attribute for the specified name, or
+            <see langword="null"/> if the attribute does not exist.
+            </summary>
+            <param name="attributeName">The name (or key) of the attribute.</param>
+            <returns>
+            The value associated with <paramref name="attributeName"/>, or
+            <see langword="null"/> if the attribute does not exist.
+            </returns>
+        </member>
+        <member name="T:NetTopologySuite.Features.IFeature">
+            <summary>
+            Contains a <see cref="T:NetTopologySuite.Geometries.Geometry"/> and a description of its metadata.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.IFeature.Geometry">
+            <summary>
+            Gets or sets the <see cref="T:NetTopologySuite.Geometries.Geometry"/> of this feature.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.IFeature.BoundingBox">
+            <summary>
+            Gets or sets an <see cref="T:NetTopologySuite.Geometries.Envelope"/> that describes the bounds of this feature.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.IFeature.Attributes">
+            <summary>
+            Gets or sets a representation of this feature's metadata, tagged by user-defined strings.
+            </summary>
+        </member>
+        <member name="T:NetTopologySuite.Features.IUnique">
+            <summary>
+            Interface for things tagged by an identifier that's assumed to be unique.
+            </summary>
+        </member>
+        <member name="P:NetTopologySuite.Features.IUnique.Id">
+            <summary>
+            Gets the identifier of this object (assumed unique).
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -10,38 +10,23 @@
   * [**许可证**](#许可证)
 
 ## **更新**
-### [UrbanXTools_v2.0.0](https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases/tag/v2.0.0_V6.14)
-#### **1. NA_Computing**
- - **优化底层算法**
- - **新增计算指标**
- - **将路网清洗（合并、去重、打断等）流程内置。**
-   
-   **现有如下计算指标：**
-	 - *Metric choice*
-	 - *Metric integration*
-	 - *Metric mean depth*
-	 - *Metric total depth*
+### [UrbanXTools_v2.2.0](https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases/tag/v2.0.0_V6.14)
+#### **1. RD_Population**
+ - **支持曲线计算**
 
-	 - *Angular choice*
-	 - *Angular integration*
-	 - *Angular mean depth*
-	 - *Angular total depth*
+#### **2. RD_E_CarbonEmissions/RD_G_CarbonEmissions**
+- **支持碳排放计算（耗能量碳排放计算，垃圾处理碳排放）**
  
-	 - *Normalized angular choice(NACH)*
-	 - *Normalized angular integration(NAIN)*
-#### **2. NA_GeneratingSites**
- - **新增根据不同等级路网生成地块的工具。**
- 
-#### **3. NA_ClearRoadsData**
- - **更名为NA_RoadsSplitter**
- - **且使用NA_Computing前不再强制需要使用此工具。**
- - **此工具在寻找曲线交点时，使用IntervalTree的数据结构和相应算法，替代暴力算法，加快速度。** 
- 
-#### **4. SA_GenerateMesh**
- - **几何数据转换**
+#### **3. SA_GenerateMesh**
+ - **几何数据转换——brep转换**
+ - **几何数据转换——mesh转换**
 
-#### **5. SA_Exposure3D**
- - **三维视线分析**
+#### **4. SA_Exposure3D**
+ - **三维视线分析——建筑**
+ - **三维视线分析——mesh**
+
+#### **5. SA_VisualSyntax**
+- **视域图网络计算**
 
 
 
@@ -81,11 +66,11 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
 
 - 进入Release界面
-	- 完全版：推荐选择 UrbanXTools_v2.0.0（已经包含以下多种版本）
+	- 完全版：推荐选择 UrbanXTools_v2.2.0（已经包含以下多种版本）
 	
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 
-- 取出文件夹：UrbanXTools_v.2.0.0
+- 取出文件夹：UrbanXTools_v.2.2.0
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_002.png)
 
@@ -95,8 +80,8 @@
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003.png)
 
-- 将文件夹：UrbanXTools_v.2.0.0 置入
-- 如果文件夹中存在 UrbanXTools_v.1.0.0，请将该文件夹全部删除，置入UrbanXTools_v.2.0.0
+- 将文件夹：UrbanXTools_v.2.2.0 置入
+- 如果文件夹中存在 UrbanXTools_v.1.0.0，或 UrbanXTools_v.2.0.0 请将该文件夹全部删除，置入UrbanXTools_v.2.2.0
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003_1.png)
 
@@ -157,12 +142,24 @@
 
 [案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
+### 7. 城市设计方案曝光度分析3D_Mesh
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+
+[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+
+### 8. 城市设计方案视觉图结构计算
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+
+[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+
 
 ## **工具内容**
 
 ### 1. 空间结构分析
 
-> Network_ClearRoadsData
+> Network_RoadsSplitter
 
 - **目的**：
     - 清洗和分割所有道路曲线，处理情况包括：重叠、形状相同和无效曲线。
@@ -172,9 +169,9 @@
     - 清洗并分割完成的道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearRoadsData.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
 
-> Network_ClearSitesData
+> Network_ClearSiteData
 
 - **目的**：
     - 清洗所有地块曲线，处理情况包括：重叠、形状相同、非平面、非闭合地块曲线。
@@ -184,7 +181,7 @@
     - 清洗完成的道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_ClearSitesData.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClearSiteData.png)
 
 > Network_Computing
 
@@ -203,7 +200,7 @@
     - 角度制 紧密中心性
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_Computing.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_Computing.png)
 
 > Network_SiteAccessibility
 
@@ -218,7 +215,7 @@
     - 地块可达性得分
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_SiteAccessibility.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_SiteAccessibility.png)
 
 > Network_RoadDensity
 
@@ -233,7 +230,7 @@
     - 输出边界内容道路曲线
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Network_RoadDensity.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadDensity.png)
 
 ### 2. 设施计算
 
@@ -249,7 +246,7 @@
   - 新建路网线段几何数据
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_ToNetwork.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_ConnectToNetwork.png)
 
 > Facility_CoverageArea
 
@@ -264,7 +261,7 @@
   - 覆盖范围内地块的几何中点
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Facility_CoverageArea.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_CoverageArea.png)
 
 ### 3. 自动生成
 
@@ -338,7 +335,7 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameter.png)
 
 
 > Urban_SiteParameterExtra
@@ -356,7 +353,7 @@
     - 输出 Urban_SiteParameter 类
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteParameterEtra.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameterExtra.png)
 
 
 > Urban_SiteGeneratePlans
@@ -393,7 +390,7 @@
     - 输出对应楼块的能源消耗量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Energy.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Energy.png)
 
 
 > Resources_Water
@@ -405,7 +402,7 @@
     - 输出对应楼块的水资源消耗量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Water.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Water.png)
 
 
 > Resources_Garbage
@@ -417,7 +414,7 @@
     - 输出对应楼块的固废产生量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_Garbage.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Garbage.png)
 
 
 > Resources_EnergyCustom
@@ -429,7 +426,7 @@
     - 输出对应体块的能源消耗量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_EnergyCustom.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_EnergyCustom.png)
 
 
 > Resources_WaterCustom
@@ -441,7 +438,7 @@
     - 输出对应体块的水资源消耗量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_WaterCustom.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_WaterCustom.png)
 
 > Resources_GarbageCustom
 - **目的**：
@@ -452,7 +449,7 @@
     - 输出对应体块的固废产生量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Resources_GarbageCustom.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_GarbageCustom.png)
 
 > Resources_Population
 - **目的**：
@@ -463,7 +460,7 @@
     - 输出对应体块的容纳人口量
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Population.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Population.png)
 
 ### 5. 空间指标计算
 > Spatial_Analysis_Exposure2D
@@ -475,29 +472,73 @@
     - 输出建筑基底轮廓线、轮廓线对应曝光率
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_ExposureRate2D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate2D.png)
 
 > Spatial_Analysis_GenerateMesh
 - **目的**：
-    - 根据细分程度，将建筑Brep面转化为Mesh面，提高计算效率。
+    - 根据细分程度，将建筑Brep面转化为DMesh面，提高计算效率。
 - **输入**：
     - 输入建筑体块、细分程度（默认值为-1）（该数值越高，结果越准确，计算速度越慢）
 - **输出**：
     - 输出GenerateMesh Class（包含建筑Mesh面，建筑立面面积，建筑中心点）
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_GenerateMesh.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh.png)
 
-> Spatial_Analysis_Exposure3D
+> Spatial_Analysis_GenerateMesh_Mesh
+- **目的**：
+    - 根据细分程度，将Mesh面转化为DMesh面，提高计算效率。
+- **输入**：
+    - 输入建筑体块
+- **输出**：
+    - 输出GenerateMesh Class（包含建筑Mesh面，建筑立面面积，建筑中心点）
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh_Mesh.png)
+
+> Spatial_Analysis_Exposure3D_Buildings
 - **目的**：
     - 根据可视点选择，计算建筑三维体块的空间曝光率，为商业选址提供空间数据支持
 - **输入**：
-    - 输入预设置的可视节点、GenerateMesh Class、横轴细分程度（默认为10）、纵轴细分程度（默认为40）、视角范围（默认为200）、视角高度（默认为45）（该数值越高，结果越准确，计算速度越慢）
+    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
 - **输出**：
-    - 输出建筑Mesh面（已染色），可视点对应的可视率
+    - 输出建筑Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
 - **样例展示**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Spatial_Analysis_ExposureRate3D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D.png)
+
+> Spatial_Analysis_Exposure3D_Mesh
+- **目的**：
+    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
+- **输出**：
+    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D_Mesh.png)
+
+> Spatial_VisualCalc
+- **目的**：
+    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
+- **输出**：
+    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualCalc.png)
+
+> Spatial_VisualSyntaxCompute
+- **目的**：
+    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
+- **输入**：
+    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
+- **输出**：
+    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
+- **样例展示**：
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualSyntaxCompute.png)
 
 
 ### 6. 水管网计算（Coming Soon）

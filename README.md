@@ -52,8 +52,8 @@
 ## **安装步骤**
 - 下载链接：
 	- 蓝奏云盘
-		- 链接：https://wwe.lanzoui.com/iH4Xuttd7ha
-		- 密码: du8d
+		- 链接：https://wwe.lanzoui.com/b01tqy68f
+		- 密码: h5d8
 	- 百度网盘
 		- 链接：链接：https://pan.baidu.com/s/1acBnxjOD2pCm4wnlYHIOzg  
 		- 密码：gz4u

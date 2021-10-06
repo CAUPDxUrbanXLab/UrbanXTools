@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<components>
+	<module name="NetworkStructure">
+		<component>
+			<id>NetworkStructure_RoadsSplitter</id>
+			<name>NS_RoadsSplitter</name>
+			<nickname>RoadsSplitter</nickname>
+			<description>Clearing and splitting input curves (both 2D and 3D). Handling all the degenerate cases: overlaps, shapely identical, intersection and invalid curve.</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="OriginalCurves" nickname="O_Curves" description="The list of original curves for splitting."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="SplittedCurve" nickname="S_Curves" description="List of splitted curves."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>NetworkStructure_Computing3D</id>
+			<name>NS_Computing3D</name>
+			<nickname>Computing3D</nickname>
+			<description>
+				Computing 3D-street network analysis.
+			</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="RoadsData" nickname="O_RoadsData" description="The original list of roads in 3D."/>
+				<input id="1" name="Radius" nickname="Radius" description="Radius in metric for computing. If using -1 as radius, component is doing global calculation."/>
+				<input id="2" name="Merge" nickname="Merge" description="True for merging all the roads segments when degree is two."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="MetricChoice" nickname="M_Choice" description=" Metric choice is calculated by counting the number of times each segment falls on the shortest path between all pairs of segments within a selected distance measured metrically"/>
+				<output id="1"  name="MetricIntegration" nickname="M_Integration" description="Metric integration measures how close each segment is to all others under the definition of metric distance, that is, the metric distance along the lines between the mid-points of two adjacent segments."/>
+				<output id="2"  name="MetricMeanDepth" nickname="M_MeanDepth" description="Metric mean depth is the average metric distance from each space to all others."/>
+				<output id="3"  name="MetricTotalDepth" nickname="M_TotalDepth" description=" Metric total depth is the cumulative total of the shortest metric distance paths between all pairs of nodes."/>
+				<output id="4"  name="AngularChoice" nickname="A_Choice" description=" Choice is calculated by counting the number of times each street segment falls on the shortest path between all pairs of segments within a selected distance (termed ‘radius’). The ‘shortest path’ refers to the path of least angular deviation (namely, the straightest route) through the system."/>
+				<output id="5"  name="AngularIntegration" nickname="A_Integration" description="Angular integration is the reciprocal of the normalised angular total depth. It can be compared across systems. It measures how close each segment is to all others in terms of the sum of angular changes that are made on each route."/>
+				<output id="6"  name="AngularMeanDepth" nickname="A_MeanDepth" description="Angular mean depth is the sum of the shortest angular paths over the sum of all angular intersections in the system. In DepthMap, it is defined as the sum of the shortest angular paths over the sum of the number of segments encountered on the paths from the root (origin) segment to all others."/>
+				<output id="7"  name="AngularTotalDepth" nickname="A_TotalDepth" description="Angular total depth is the cumulative total of the shortest angular paths to a selected segment as root."/>
+				<output id="8"  name="NormalisedAngularChoice" nickname="NACH" description="Angular total depth is the cumulative total of the shortest angular paths to a selected segment as root."/>
+				<output id="9"  name="NormalisedAngularIntegration" nickname="NAIN" description="Angular total segment length is the cumulative sum of the length of the segments along the least angular change path from an origin to a destination."/>
+				<output id="10"  name="CleanedRoadsData" nickname="C_RoadsData" description="A list of cleaned 3D-roads segments."/>
+			</outputs>
+		</component>
+
+		<component>
+			<id>NetworkStructure_ClearSitesData</id>
+			<name>NS_ClearSitesData</name>
+			<nickname>ClearSitesData</nickname>
+			<description>Clearing all the input sites curves. Handling all the degenerate cases: duplicated, shapely identical, non_planar , non_closed and invalid curve.</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="OriginalSitesData" nickname="O_SitesData" description="The original list of sites waiting for cleaning."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="CleanedSitesData" nickname="C_SitesData" description="A list of cleaned sites data."/>
+			</outputs>
+		</component>
+
+		<component>
+			<id>NetworkStructure_Computing</id>
+			<name>NS_Computing</name>
+			<nickname>Computing</nickname>
+			<description>
+				Computing street network analysis.
+			</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="RoadsData" nickname="O_RoadsData" description="The original list of roads."/>
+				<input id="1" name="Radius" nickname="Radius" description="Radius in metric for computing. If using -1 as radius, component is doing global calculation."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="MetricChoice" nickname="M_Choice" description=" Metric choice is calculated by counting the number of times each segment falls on the shortest path between all pairs of segments within a selected distance measured metrically"/>
+				<output id="1"  name="MetricIntegration" nickname="M_Integration" description="Metric integration measures how close each segment is to all others under the definition of metric distance, that is, the metric distance along the lines between the mid-points of two adjacent segments."/>
+				<output id="2"  name="MetricMeanDepth" nickname="M_MeanDepth" description="Metric mean depth is the average metric distance from each space to all others."/>
+				<output id="3"  name="MetricTotalDepth" nickname="M_TotalDepth" description=" Metric total depth is the cumulative total of the shortest metric distance paths between all pairs of nodes."/>
+				<output id="4"  name="AngularChoice" nickname="A_Choice" description=" Choice is calculated by counting the number of times each street segment falls on the shortest path between all pairs of segments within a selected distance (termed ‘radius’). The ‘shortest path’ refers to the path of least angular deviation (namely, the straightest route) through the system."/>
+				<output id="5"  name="AngularIntegration" nickname="A_Integration" description="Angular integration is the reciprocal of the normalised angular total depth. It can be compared across systems. It measures how close each segment is to all others in terms of the sum of angular changes that are made on each route."/>
+				<output id="6"  name="AngularMeanDepth" nickname="A_MeanDepth" description="Angular mean depth is the sum of the shortest angular paths over the sum of all angular intersections in the system. In DepthMap, it is defined as the sum of the shortest angular paths over the sum of the number of segments encountered on the paths from the root (origin) segment to all others."/>
+				<output id="7"  name="AngularTotalDepth" nickname="A_TotalDepth" description="Angular total depth is the cumulative total of the shortest angular paths to a selected segment as root."/>
+				<output id="8"  name="NormalisedAngularChoice" nickname="NACH" description="Angular total depth is the cumulative total of the shortest angular paths to a selected segment as root."/>
+				<output id="9"  name="NormalisedAngularIntegration" nickname="NAIN" description="Angular total segment length is the cumulative sum of the length of the segments along the least angular change path from an origin to a destination."/>
+				<output id="10"  name="CleanedRoadsData" nickname="C_RoadsData" description="A list of cleaned roads segments."/>
+			</outputs>
+		</component>
+		
+
+		<component>
+			<id>NetworkStructure_RoadDensity</id>
+			<name>NS_RoadDensity</name>
+			<nickname>RoadDensity</nickname>
+			<description>Calculating road density within a given region.</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="Roads" nickname="Roads" description="A list of all the roads curves.(Accepts all curve types.)"/>
+				<input id="1" name="Boundary" nickname="Boundary" description="Boundary curve for calculating roads density.(Accepts all curve types and irregular shape.)"/>	
+			</inputs>
+			<outputs>
+				<output id="0"  name="RoadDensityDouble" nickname="RoadDensityD" description="Road density result in double type."/>
+				<output id="1"  name="RoadDensityString" nickname="RoadDensityS" description="Road density result with default unit in string type."/>
+				<output id="2"  name="CurvesInBoundary" nickname="Curves" description="Curve segments within the given boundary."/>
+			</outputs>
+		</component>
+		
+
+		<component>
+			<id>NetworkStructure_SiteAccessibility</id>
+			<name>NS_SiteAccessibility</name>
+			<nickname>SiteAccessibility</nickname>
+			<description>Calculating the accessibility score for a given list of sites.</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="CleanedRoadsData" nickname="C_RoadsData" description="Cleaned roads segment. (Connect the output of NA_ClearRoadsData component to this slut.)"/>
+				<input id="1" name="RoadsScores" nickname="RoadsScores" description="Network analysis results representing roads accessibility.(Choose one calculate result from NA_Computing.)"/>
+				<input id="2" name="SitesCurves" nickname="SitesCurves" description="A list of curves representing all the tested sites."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="CleanedSitesData" nickname="C_SitesData" description="Planar sites polygons in the same order of SiteScores.(This list is cleaned sites data.)"/>
+				<output id="1"  name="SiteScores" nickname="SiteScores" description="Sites accessibility scores in the same order of SitesPolygons."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>NetworkStructure_GravityModel</id>
+			<name>NS_GravityModel</name>
+			<nickname>GravityModel</nickname>
+			<description>Calculating the gravity scores from a given list of sites to tods.</description>
+			<category>UrbanX</category>
+			<subCategory>1_NetworkStructure</subCategory>
+			<inputs>
+				<input id="0" name="SitesPoint" nickname="sPoints" description="A list of centroid points for all the sites."/>
+				<input id="1" name="TodsPoint" nickname="tPoints" description="A list of centroid points for all the tods."/>
+				<input id="2" name="E" nickname="e" description="dist^e"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="Scores" nickname="scores" description="Scores for all the sites."/>
+			</outputs>
+		</component>
+		
+		
+	</module>
+	
+	<module name="RegulatoryPlanning">
+		<component>
+			<id>RegulatoryPlanning_GeneratingSites</id>
+			<name>RP_GeneratingSites</name>
+			<nickname>GeneratingSites</nickname>
+			<description>Automatically generating sites polygon based on the input roads network.</description>
+			<category>UrbanX</category>
+			<subCategory>2_RegulatoryPlanning</subCategory>
+			<inputs>
+				<input id="0" name="MainRoads" nickname="mRoads" description="A list of curves representing the primary roads."/>
+				<input id="1" name="SecondaryRoads" nickname="sRoads" description="A list of curves representing the secondary roads.(Optional)"/>
+				<input id="2" name="TertiaryRoads" nickname="tRoads" description="A list of curves representing the tertiary roads.(Optional)"/>
+				<input id="3" name="Branches" nickname="branches" description="A list of curves representing the branches roads.(Optional)"/>
+				<input id="4" name="RoadsWidths" nickname="rWidths" description="A list of number representing the width for roads in the order from primary to branches."/>
+				<input id="5" name="CornerRadius" nickname="cRadius" description="The radius for rounding the site corners."/>
+				<input id="5" name="Boundary" nickname="boundary" description="The boundary for determining the area to generate sites."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="GeneratedSites" nickname="gSites" description="Result of all the generated sites polygons."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>RegulatoryPlanning_ClusteringBlocks</id>
+			<name>RP_ClusteringBlocks</name>
+			<nickname>ClusteringBlocks</nickname>
+			<description>
+				Clustering a set of sites blocks based on the network distance matrix by using HAC algorithm.
+			</description>
+			<category>UrbanX</category>
+			<subCategory>2_RegulatoryPlanning</subCategory>
+			<inputs>
+				<input id="0" name="Roads" nickname="roads" description="A set of curves representing all the roads."/>
+				<input id="1" name="Sites" nickname="sites" description="A set of closed curves representing all the sites."/>
+				<input id="2" name="Diameters" nickname="diameters" description="A list of distances for complete linkage clustering."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="ClusterLinks" nickname="cLinks" description="Links to represent the hierarchy of all the clusters."/>
+				<output id="1"  name="SiteIds" nickname="sIds" description="The id for each site in Tree structure to represent the hierarchy of all the clusters."/>
+				<output id="2"  name="Out" nickname="out" description="The output object which contains all the information of clustering. This data will be used in Landuse allocation component."/>
+			</outputs>
+		</component>
+
+		<component>
+			<id>RegulatoryPlanning_ClusteringPoints</id>
+			<name>RP_ClusteringPoints</name>
+			<nickname>ClusteringPoints</nickname>
+			<description>
+				Clustering a set of sites blocks based on the distance matrix among all the site centroids by using HAC algorithm.
+			</description>
+			<category>UrbanX</category>
+			<subCategory>2_RegulatoryPlanning</subCategory>
+			<inputs>
+				<input id="0" name="SitesCentroid" nickname="points" description="A set of centroids representing all the sites."/>
+				<input id="1" name="Diameters" nickname="diameters" description="A list of distances for complete linkage clustering."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="ClusterLinks" nickname="cLinks" description="Links to represent the hierarchy of all the clusters."/>
+				<output id="1"  name="SiteIds" nickname="sIds" description="The id for each site in Tree structure to represent the hierarchy of all the clusters."/>
+				<output id="2"  name="Out" nickname="out" description="The output object which contains all the information of clustering. This data will be used in Landuse allocation component."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>RegulatoryPlanning_LanduseAllocation</id>
+			<name>RP_LanduseAllocation</name>
+			<nickname>LanduseAllocation</nickname>
+			<description>Automatically allocating landuse for each site.</description>
+			<category>UrbanX</category>
+			<subCategory>2_RegulatoryPlanning</subCategory>
+			<inputs>
+				<input id="0" name="Sites" nickname="sites" description="A set of closed curves representing all the sites."/>
+				<input id="1" name="Scores" nickname="scores" description="The accessibillity scores with different radius for each site.(Preferred three branches)"/>
+				<input id="2" name="ClusterIds" nickname="ids" description="The object which contains all the information of clustering. Please using the output data from ClusteringBlocks component."/>
+				<input id="3" name="LandUse" nickname="landuse" description="Landuse with the input order represents priority + percentage of each landuse.(eg:  R:0.2 )"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="SitesPolygon" nickname="sites" description="A set of closed curves representing all the sites after split."/>
+				<output id="1"  name="SitesLanduse" nickname="landuse" description="All the allocated landuse for each site."/>
+				<output id="2"  name="Statistics" nickname="statistics" description="The result in terms of the percentage of each type of landuse."/>
+				<output id="3"  name="Model_LanduseAllocation" nickname="model" description="The result of landuse allocation."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>RegulatoryPlanning_FarAllocation</id>
+			<name>RP_FarAllocation</name>
+			<nickname>FarAllocation</nickname>
+			<description>Automatically allocating far for each site.</description>
+			<category>UrbanX</category>
+			<subCategory>2_RegulatoryPlanning</subCategory>
+			<inputs>
+				<input id="0" name="Model_LanduseAllocation" nickname="model" description="Model_LanduseAllocation class from LanduseAllocation components."/>
+				<input id="1" name="TotalArea" nickname="area" description="The total area of target urban design."/>
+				<input id="2" name="FARRatio" nickname="FAR" description="The percentage of construction area in each landuse.(eg:  R:0.2, GIC:0.2 )"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="FARResult" nickname="FAR" description="All the allocated FAR for each site."/>
+			</outputs>
+		</component>
+		
+
+		
+	</module>
+	
+	
+	<module name="UrbanDesign">
+		<component>
+			<id>Urban_DesignCalculator</id>
+			<name>UD_DesignCalculator</name>
+			<nickname>DesignCalculator</nickname>
+			<description>Calculating building numbers and floors for each prototype to satisfy the target of a given FAR and Density.(Obsolete)</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="SiteCurve" nickname="SiteCurve" description="Site for holding buildings.(Accepts all curve types.)"/>
+				<input id="1" name="Buildings" nickname="Buildings" description="2D outlines representing building prototypes."/>
+				<input id="2" name="FloorsRange" nickname="FloorsRange" description="Floors range interval for each building prototype."/>
+				<input id="3" name="TargetFAR" nickname="TargetFAR" description="Target FAR for current site to achieve."/>
+				<input id="4" name="TargetDensity" nickname="TargetDensity" description="Target Density for current site to achieve."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="TypeCounts" nickname="TypeCounts" description="Required numbers for each building prototype."/>
+				<output id="1"  name="TypeFloors" nickname="TypeFloors" description="Required floors for each building prototype."/>
+				<output id="2" name="AccurateFAR" nickname="AccurateFAR" description="Accurate FAR for current solution."/>
+				<output id="3" name="AccurateDensity" nickname="AccurateDensity" description="Accurate density for current solution."/>			
+			</outputs>
+		</component>
+	
+		
+		
+		<component>
+			<id>Urban_DynamicSplit</id>
+			<name>UD_DynamicSplit</name>
+			<nickname>DynamicSplit</nickname>
+			<description>Using binary space partition tree to split a given site with accurate areas ratios.(Obsolete)</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="SiteCurve" nickname="SiteCurve" description="Site curve for splitting.(Accepts all curve types and irregular shape except L-shape and U-shape.) "/>
+				<input id="1" name="AreasList" nickname="AreasList" description="A list of double holding target areas or ratios for each site.(Accepts duplicates.If using ratios, list sum must equal one.)"/>
+				<input id="2" name="Priorities" nickname="Priorities" description="Priorities of each site.(Subsites with higher priority will be near to roads that have higher accessibility.)"/>
+				<input id="3" name="Accessibilties" nickname="Accessibilties" description="Accessibilties scores for each edge of site's bounding box.(Please enter a four accessibility scores into a list.)"/>
+				<input id="4" name="SplitAngle" nickname="SplitAngle" description="Angle in radians format for constructing bounding box and splitting site."/>
+				<input id="5" name="RenewAngle" nickname="RenewAngle" description="Renew angle for each literation of splitting."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="SubSites" nickname="SubSites" description="Result list of subsites curves after dynamic splitting."/>
+				<output id="1"  name="SubEdges" nickname="SubEdges" description="Edges of bounding box for each subsite.(Used for understanding the logic of splitting.)"/>
+				<output id="2" name="EdgeScores" nickname="EdgeScores" description="Priority scores for each edge of subsite's bounding box.(Shares same order with SubEdges.)"/>
+				<output id="3" name="SubAngles" nickname="SubAngles" description="Angle in radians for each subsite."/>
+				<output id="4" name="SubIndex" nickname="SubIndex" description="Index for each subsite corresponding to input areas list."/>
+				<output id="5" name="BSPTree" nickname="BSPTree" description="Visualization for internal binary space partition tree.(Used for understanding the logic of splitting.)"/>			
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>Urban_ResidentialLimitation</id>
+			<name>UD_ResidentialLimitation</name>
+			<nickname>ResidentialLimitation</nickname>
+			<description>Calculating the theoretical maximum FAR and densit based on the input site and city.(Obsolete)</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="SiteCurve" nickname="SiteCurve" description="Site curve for holding residential buildings."/>
+				<input id="1" name="CityIndex" nickname="CityIndex" description="City index for getting coordinates."/>
+				<input id="2" name="HeightLimit" nickname="HeightLimit" description="Height limitation for current site.(Unit: meter.)"/>
+				<input id="3" name="FloorHeight" nickname="FloorHeight" description="Height for each floor.(Using 3.0m as default.)"/>
+				<input id="4" name="Orientation" nickname="Orientation" description="Angle in radians representing the main orientation of buildings.(Using 0 as default.)"/>
+				<input id="5" name="BuildingDepth" nickname="BuildingDepth" description="Depth for residential outline.(Using 26m as default.)"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="MaxFAR" nickname="MaxFAR" description="Theoretical maximum FAR based on input parameters."/>
+				<output id="1"  name="MaxDensity" nickname="MaxDensity" description="Theorectical maximum density only in the Maximum FAR scenario.(Note:When FAR is smaller than maxFar, density will increase.)"/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>UrbanDesign_SiteGeneratePlans</id>
+			<name>UD_SiteGeneratePlans</name>
+			<nickname>SiteGeneratePlans</nickname>
+			<description>Generating buildings for all the sites.</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="SiteParameters" nickname="SiteParameters" description="List of refined site parameters for all the sites.(Connect the output of UD_SiteParameterExtra component to this slut.)"/>
+				<input id="1" name="CityIndex" nickname="CityIndex" description="City index for getting coordinates."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="DesignResults" nickname="DesignResults" description="Generic output contains original design result.(This output is used for resource demand calculation.)"/>
+				<output id="1"  name="SiteCurves" nickname="SiteCurves" description="The original site curves without splitting."/>
+				<output id="2"  name="FARs" nickname="FARs" description="The current FAR for each site after generating buildings."/>
+				<output id="3"  name="Densities" nickname="Densities" description="The current Density for each site after generating buildings."/>
+				<output id="4"  name="SubSites" nickname="SubSites" description="SubSites for each original site after splitting."/>
+				<output id="5"  name="SubSitesSetbacks" nickname="SubSitesSetbacks" description="Setback curves for each subsite."/>
+				<output id="6"  name="BuildingFloorCurves" nickname="BuildingFloorCurves" description="Curves representing the floor layers for each building."/>
+				<output id="7"  name="BuildingRoofs" nickname="BuildingRoofs" description="All the roof curves for each building."/>
+				<output id="8"  name="BuildingFloorCount" nickname="BuildingFloorCount" description="Count of floors for each building, corresponding to BuildingRoofs."/>
+				<output id="9"  name="BuildingBreps" nickname="BuildingBreps" description="Brep geometries representing all the buildings."/>
+				<output id="10"  name="BuildingFunctions" nickname="BuildingFunctions" description="Functions name for each brep within a building, corresponding to BuildingBreps.(R\H\O\C\W\M)"/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>UrbanDesign_SiteParameter</id>
+			<name>UD_SiteParameter</name>
+			<nickname>SiteParameter</nickname>
+			<description>Getting initial site parameters based on input roads and sites curves.</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="CleanedRoadsData" nickname="C_RoadsData" description="Cleaned roads segment. (Connect the output of NA_ClearRoadsData component to this slut.)"/>
+				<input id="1" name="RoadsScores" nickname="RoadsScores" description="Network analysis results representing roads accessibility.(Choose one calculate result from NA_Computing.)"/>
+				<input id="2" name="SitesCurves" nickname="SitesCurves" description="A list of curves representing the base sites for generating buildings."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="InitialSiteParameters" nickname="InitialSiteParameters" description="A list of initial site parameters for all the sites."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>UrbanDesign_SiteParameterExtra</id>
+			<name>UD_SiteParameterExtra</name>
+			<nickname>SiteParameterExtra</nickname>
+			<description>Adding or refining the properties of each initial site parameters.</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="SiteParameters" nickname="SiteParameters" description="A list of initial site parameters for all the sites.(Connect the output of UD_SiteParameter component to this slut.)"/>
+				<input id="1" name="SiteTypesEnum" nickname="SiteTypesEnum" description="Site type enumerators.(R:0, C:1, GIC:2, M:3, W:4)"/>
+				<input id="2" name="TargetFAR" nickname="TargetFAR" description="Target FAR for current site to achieve."/>
+				<input id="3" name="TargetDensity" nickname="TargetDensity" description="Target Density for current site to achieve."/>
+				<input id="4" name="MixRatios" nickname="MixRatios" description="The ratio of mixuse buildings.(MixRatio = mixBuildingArea/totalBuildingArea"/>
+				<input id="5" name="BuidlingStyles" nickname="BuidlingStyles" description="For residential building: 0: row ; 1 : dot. For non-residential building: 0: dot ; 1: group; 2: mixed."/>
+				<input id="6" name="Orientation" nickname="Orientation" description="Angle in radians representing the main orientation of buildings.(Using 0 as default.)"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="RefinedSiteParameters" nickname="RefinedSiteParameters" description="A list of refined site parameters for all the sites."/>
+			</outputs>
+		</component>
+		
+
+	</module>
+	
+	<module name="FacilityAnalysis">
+		<component>
+			<id>FacilityAnalysis_CoverageArea</id>
+			<name>FA_CoverageArea</name>
+			<nickname>CoverageArea</nickname>
+			<description>Finding the coverage area for a facility based on a given radius.</description>
+			<category>UrbanX</category>
+			<subCategory>4_FacilityAnalysis</subCategory>
+			<inputs>
+				<input id="0" name="RoadsNetwork" nickname="Network" description="Generic input parameter for calculating coverage area."/>
+				<input id="1" name="SourceSites" nickname="Sources" description="Sources curves representing facility sites."/>
+				<input id="2" name="NetworkRadius" nickname="Radius" description="Network length for coverage radius."/>	
+			</inputs>
+			<outputs>
+				<output id="0"  name="CoveredSites" nickname="Sites" description="Seleced sites within a given coverage area."/>
+				<output id="1"  name="CoveredSitesCentroids" nickname="Centroids" description="The centroids for all the covered sites."/>
+			</outputs>
+		</component>
+
+
+		<component>
+			<id>FacilityAnalysis_ConnectToNetwork</id>
+			<name>FA_ConnectToNetwork</name>
+			<nickname>ConnectToNetwork</nickname>
+			<description>Connecting all the sites to nearest surrounding roads segments.</description>
+			<category>UrbanX</category>
+			<subCategory>4_FacilityAnalysis</subCategory>
+			<inputs>
+				<input id="0" name="RoadsCurves" nickname="RoadsCurves" description="All the roads curves for constructing a network."/>
+				<input id="1" name="SitesCurves" nickname="SitesCurves" description="All the sites curves for connecting to roads."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="RoadsNetwork" nickname="Network" description="Generic output parameter for calculating coverage area."/>
+				<output id="1"  name="RoadsSegments" nickname="Segments" description="The segments of all the roads after connecting sites."/>
+			</outputs>
+		</component>
+	</module>
+	
+
+		
+	<module name="SustainabilityAnalysis">
+		
+        <!-- 从现有数据读取，计算人口数据-->
+        <component>
+          <id>SustainabilityAnalysis_Population</id>
+          <name>SA_Population</name>
+          <nickname>Population</nickname>
+          <description>Calculates population in each residential building. TODO: only residential? </description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="InputBreps" nickname="InputBreps" description="Input brep list to calculate population."/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="Population" nickname="Population" description="Result of population estimation in each building."/>
+          </outputs>
+        </component>
+		
+
+        <!-- 从类读取，能源消耗量计算 -->
+        <component>
+          <id>SustainabilityAnalysis_Energy</id>
+          <name>SA_Energy</name>
+          <nickname>Energy</nickname>
+          <description>Calculates energy consumption for each building.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="DesignResult" nickname="DesignResult" description="Generic input contains original design result.(Connect the output of UD_SiteGeneratePlans component to this slut.)"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="EnergyConsumption" nickname="EnergyConsumption" description="Result of energy consumption for each building, unit=kWh/year"/>
+          </outputs>
+        </component>
+		
+		
+		<!-- 从类读取，能源消耗量计算，能源碳排放 -->
+        <component>
+          <id>SustainabilityAnalysis_EnergyCarbonEmissions</id>
+          <name>SA_EnergyCarbonEmissions</name>
+          <nickname>EnergyCarbonEmissions</nickname>
+          <description>Calculates the carbon emissions for generating the given amount of energy.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="EnergyConsumption" nickname="EnergyConsumption" description="Result of energy consumption for each building, unit=kWh/year"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="CarbonEmissions" nickname="CarbonEmissions" description="Result of carbon emissions for generating the given amount of energy, CO2 , unit=t/year"/>
+          </outputs>
+        </component>
+		
+    
+        <!-- 从类读取，水资源消耗量计算-->
+        <component>
+          <id>SustainabilityAnalysis_Water</id>
+          <name>SA_Water</name>
+          <nickname>Water</nickname>
+          <description>Calculates water consumption for each building.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="DesignResult" nickname="DesignResult" description="Generic input contains original design result.(Connect the output of UD_SiteGeneratePlans component to this slut.)"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="WaterConsumption" nickname="WaterConsumption" description="Result of water consumption for each building,  unit=t/year"/>
+          </outputs>
+        </component>
+
+        <!-- 从类读取，固废资源产生量计算-->
+        <component>
+          <id>SustainabilityAnalysis_Waste</id>
+          <name>SA_Waste</name>
+          <nickname>Waste</nickname>
+          <description>Calculates domestic waste generation for each building.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="DesignResult" nickname="DesignResult" description="Generic input contains original design result.(Connect the output of UD_SiteGeneratePlans component to this slut.)"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="WasteGeneration" nickname="WasteGeneration" description="Result of domestic waste generation which require further treatment,  unit=t/year"/>
+          </outputs>
+        </component>
+
+	  <!-- 从类读取，固废资源产生量计算，固废碳排放-->
+        <component>
+          <id>SustainabilityAnalysis_WasteCarbonEmissions</id>
+          <name>SA_WasteCarbonEmissions</name>
+          <nickname>WasteCarbonEmissions</nickname>
+          <description>Calculates the carbon emissions for waste treatment.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="WasteGeneration" nickname="WasteGeneration" description="Result of domestic waste generation which require further treatment,  unit=t/year"/>
+						<input id="1" name="wasteTreatment" nickname="wasteTreatment" description="The method of waste treatment for a given amount of waste.[0]waste_landfill. [1]waste_incineration. [2]waste_composting"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="CarbonEmissions" nickname="CarbonEmissions" description="Result of carbon emissions for waste treatment, CO2 , unit=t/year"/>
+          </outputs>
+        </component>
+		
+		
+		
+			
+
+        <!-- 从现有数据读取，能源消耗量计算-->
+        <component>
+          <id>SustainabilityAnalysis_EnergyCustom</id>
+          <name>SA_EnergyCustom</name>
+          <nickname>EnergyCustom</nickname>
+          <description>Calculates energy consumption for each building based on custom input objects.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="InputBreps" nickname="InBrep" description="Input breps to calculate energy consumption."/>
+            <input id="1" name="InputFunctions" nickname="InFun" description="Input functions of each brep, R,C,H,O,GIC,M,W"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="EnergyConsumption" nickname="EnergyConsumption" description="Result of energy consumption for each building, result=[min,max], unit=kw/y"/>
+          </outputs>
+        </component>
+    
+        <!-- 从现有数据读取，水资源消耗量计算-->
+        <component>
+          <id>SustainabilityAnalysis_WaterCustom</id>
+          <name>SA_WaterCustom</name>
+          <nickname>WaterCustom</nickname>
+          <description>Calculates water consumption for each building based on custom input objects.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="InputBreps" nickname="InBrep" description="Input breps to calculate water consumption."/>
+            <input id="1" name="InputFunctions" nickname="InFun" description="Input functions of each brep, R,C,H,O,GIC,M,W"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="WaterConsumption" nickname="WaterConsumption" description="Result of water consumption for each building, result=[min,max], unit=T/d"/>
+          </outputs>
+        </component>
+
+        <!-- 从现有数据读取，固废资源产生量计算-->
+        <component>
+          <id>SustainabilityAnalysis_WasteCustom</id>
+          <name>SA_WasteCustom</name>
+          <nickname>WasteCustom</nickname>
+          <description>Calculates domestic waste generation for each building based on input objects.</description>
+          <category>UrbanX</category>
+          <subCategory>5_SustainabilityAnalysis</subCategory>
+          <inputs>
+            <input id="0" name="InputBreps" nickname="InBrep" description="Input breps to calculate domestic waste generation."/>
+            <input id="1" name="InputFunctions" nickname="InFun" description="Input functions of each brep, R,C,H,O,GIC,M,W"/>
+          </inputs>
+          <outputs>
+            <output id="0"  name="WasteGeneration" nickname="WasteGeneration" description="Result of domestic waste generation which require further treatment, result=[min,max], unit=kg/d"/>
+          </outputs>
+        </component>
+    </module>
+
+	<module name="VisibilityAnalysis">
+		<!-- 从Rhino Brep转换到Rhino Mesh-->
+		<component>
+			<id>VisibilityAnalysis_GenerateMeshBuildings</id>
+			<name>VA_GenerateMeshBuildings</name>
+			<nickname>GenerateMeshBuildings</nickname>
+			<description>Convert rhino brep into DMesh</description>
+			<category>UrbanX</category>
+			<subCategory>6_VisibilityAnalysis</subCategory>
+			<inputs>
+				<input id="0" name="brep" nickname="B" description="input brep"/>
+				<input id="1" name="subdivisionSize" nickname="subSize" description="default is -1, system would auto-generate simplest geometry"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="generatedMeshClass" nickname="GMClass" description="output DMesh class, contained top, bottom mesh, side mesh, sidemesh area, mesh center point"/>
+			</outputs>
+		</component>
+
+		<!-- 从Rhino Mesh转换到Rhino Mesh-->
+		<component> 
+			<id>VisibilityAnalysis_GenerateMesh</id>
+			<name>VA_GenerateMesh</name>
+			<nickname>GenerateMesh</nickname>
+			<description>Convert rhino mesh into DMesh</description>
+			<category>UrbanX</category>
+			<subCategory>6_VisibilityAnalysis</subCategory>
+			<inputs>
+				<input id="0" name="mesh" nickname="M" description="input mesh"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="generatedMeshClass" nickname="GMClass" description="output DMesh class."/>
+			</outputs>
+		</component>
+`
+		<!-- 计算三维视线曝光，并返回每个点的可视概率-->
+		<component>
+			<id>VisibilityAnalysis_ExposureRate3DBuildings</id>
+			<name>VA_ExposureRate3DBuildings</name>
+			<nickname>ExposureRate3DBuildings</nickname>
+			<description>Calculate the visibility ratio of each pt in 3d context</description>
+			<category>UrbanX</category>
+			<subCategory>6_VisibilityAnalysis</subCategory>
+			<inputs>
+				<input id="0"  name="viewPt" nickname="vPt" description="view pts in the context"/>
+				<input id="1"  name="generatedMeshClass" nickname="GMClass" description="input generated mesh class"/>
+				<input id="2" name="viewRange" nickname="vRange" description="view range in each pt as radius"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="ColoredSidesMesh" nickname="sideM" description="output colored sides mesh"/>
+				<output id="1"  name="UnColoredTopMesh" nickname="topBtnM" description="output colored top, bottom mesh"/>
+				<output id="2"  name="MeshIntrCount" nickname="MCount" description="output the count of each mesh got intersected"/>
+				<output id="3"  name="VisData" nickname="VIS" description="output data of each pt. [0] total vis area, [1] normalized vis area((ratio=visible building/buildings in view range)). [2] vis ratio(each vis area/area should be seen)."/>
+			</outputs>
+		</component>
+
+    <!-- 计算三维视线曝光，并返回每个点的可视概率-->
+    <component>
+      <id>VisibilityAnalysis_ExposureRate3DMesh</id>
+      <name>VA_ExposureRate3DMesh</name>
+      <nickname>ExposureRate3DMesh</nickname>
+      <description>Calculate the visibility ratio of each pt in 3d context</description>
+      <category>UrbanX</category>
+      <subCategory>6_VisibilityAnalysis</subCategory>
+      <inputs>
+        <input id="0"  name="viewPt" nickname="vPt" description="view pts in the context"/>
+        <input id="1"  name="generatedMeshClass" nickname="GMClass" description="input generated mesh class"/>
+        <input id="2" name="viewRange" nickname="vRange" description="view range in each pt as radius"/>
+      </inputs>
+      <outputs>
+        <output id="0"  name="ColoredMesh" nickname="M" description="output colored mesh"/>
+        <output id="1"  name="MeshIntrCount" nickname="MCount" description="output the count of each mesh got intersected"/>
+        <output id="2"  name="VisData" nickname="VIS" description="output data of each pt. [0] total vis area, [1] normalized vis area((ratio=visible area/whole object area))."/>
+      </outputs>
+    </component>
+
+    <!-- 计算三维视线可视域，并返回每条线的可视概率-->
+    <component>
+      <id>VisibilityAnalysis_VisualCalc</id>
+      <name>VA_VisualCalc</name>
+      <nickname>VisualCalc</nickname>
+      <description>calculate the visibility ratio of each crvs in 3d context</description>
+      <category>UrbanX</category>
+      <subCategory>6_VisibilityAnalysis</subCategory>
+      <inputs>
+        <input id="0"  name="viewRoads" nickname="vRoads" description="view Roads in the context"/>
+        <input id="1"  name="generatedMeshClass" nickname="GMClass" description="input generated mesh class"/>
+        <input id="2" name="divideLength" nickname="dLength" description="set divide length to divide those roads[unit: m. default:500m]"/>
+        <input id="3" name="viewRange" nickname="vRange" description="view range in each pt as radius[unit: m. default:300m]"/>
+        <input id="4" name="exportMesh" nickname="eMesh" description="toggle to export mesh data[default: false]"/>
+      </inputs>
+      <outputs>
+        <output id="0"  name="cleanedRoads" nickname="cRoads" description="output cleanded roads"/>
+        <output id="1"  name="ptsOnRoad" nickname="roadPts" description="output pts on each roads"/>
+        <output id="2"  name="VisData" nickname="VIS" description="output data of each road. [0] total vis area, [1] transfered total vis area data. [2] transfered normalized vis area(each vis area/total vis area). [3] transfered vis ratio(each vis area/area should be seen)."/>
+        <output id="3"  name="ColoredMesh" nickname="M" description="output colored mesh if toggle true"/>
+      </outputs>
+    </component>
+
+		
+		
+    <!-- 计算三维视域句法，并返回每条线的视域句法数值-->
+    <component>
+      <id>VisibilityAnalysis_VisualSyntaxComputing</id>
+      <name>VA_VisualSyntaxCompute</name>
+      <nickname>VisualSyntaxCompute</nickname>
+      <description>calculate the visual syntax of each crvs in 3d context</description>
+      <category>UrbanX</category>
+      <subCategory>6_VisibilityAnalysis</subCategory>
+      <inputs>
+        <input id="0"  name="cleanedRoads" nickname="cRoads" description="cleaned roads in the context"/>
+        <input id="1"  name="scoreOnRoads" nickname="sRoads" description="score on each road"/>
+        <input id="2" name="radius" nickname="R" description="Radius in metric for computing. If using -1 as radius, component is doing global calculation."/>
+      </inputs>
+      <outputs>
+        <output id="0"  name="visualTotalDepth" nickname="visTD" description="visual total depth in each road"/>
+        <output id="1"  name="visualMeanDepth" nickname="visMD" description="visual mean depth in each road"/>
+        <output id="2"  name="visualIntegration" nickname="visI" description="visual integration in each road"/>
+        <output id="3"  name="visualChoice" nickname="visC" description="visual choice in each road"/>
+        <output id="4"  name="NormalisedVisualIntegration" nickname="NAVIN" description="normalised visual integration in each road"/>
+        <output id="5"  name="NormalisedVisualChoice" nickname="NAVCH" description="normalised visual choice in each road"/>
+      </outputs>
+    </component>
+
+
+		<!-- 从现有数据读取，建筑曝光率计算-->
+		<component>
+			<id>VisibilityAnalysis_ExposureRate2D</id>
+			<name>VA_ExposureRate2D</name>
+			<nickname>ExposureRate2D</nickname>
+			<description>calculate exposure rate of each side in builidng brep</description>
+			<category>UrbanX</category>
+			<subCategory>6_VisibilityAnalysis</subCategory>
+			<inputs>
+				<input id="0" name="inputBreps" nickname="inBrep" description="input brep list to calculate exposure rate value"/>
+				<input id="1" name="inputPts" nickname="inPts" description="input point list to create rays"/>
+				<input id="2" name="nomalized" nickname="N" description="normalized the exposure rate value"/>
+				<input id="3" name="radius" nickname="R" description="the radius of rays"/>
+				<input id="4" name="segments" nickname="S" description="the segments of rays"/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="outputLines" nickname="L" description="brep outlines in first level"/>
+				<output id="1"  name="outputExposureRates" nickname="ER" description="value for each brep outlines"/>
+			</outputs>
+		</component>
+	</module>
+
+	<module name="Utility">
+		<component>
+			<id>Utility_To3DJson</id>
+			<name>U_To3DJson</name>
+			<nickname>To3DJson</nickname>
+			<description>Write rhino curves into 3d json.</description>
+			<category>UrbanX</category>
+			<subCategory>7_Utility</subCategory>
+			<inputs>
+				<input id="0" name="Curves" nickname="curves" description="Input curves for converting."/>
+				<input id="1" name="FilePath" nickname="path" description="Json file path."/>
+				</inputs>
+			<outputs>
+				<output id="0"  name="Success" nickname="success" description="True for writing the file successifully."/>
+				</outputs>
+		</component>
+
+
+	
+	</module>
+
+</components>

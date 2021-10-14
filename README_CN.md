@@ -1,15 +1,33 @@
 # UrbanXTools
 
-## **Language**
-[Chinese]()
-[Engilish]
 
-##  **Content**
+##  **目录**
+  * [**更新**](#更新)
   * [**介绍**](#介绍)
   * [**安装步骤**](#安装步骤)
   * [**演示**](#演示)
   * [**工具内容**](#工具内容)
   * [**许可证**](#许可证)
+
+## **更新**
+### [UrbanXTools_v2.2.0](https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases/tag/v2.0.0_V6.14)
+#### **1. RD_Population**
+ - **支持曲线计算**
+
+#### **2. RD_E_CarbonEmissions/RD_G_CarbonEmissions**
+- **支持碳排放计算（耗能量碳排放计算，垃圾处理碳排放）**
+ 
+#### **3. SA_GenerateMesh**
+ - **几何数据转换——brep转换**
+ - **几何数据转换——mesh转换**
+
+#### **4. SA_Exposure3D**
+ - **三维视线分析——建筑**
+ - **三维视线分析——mesh**
+
+#### **5. SA_VisualSyntax**
+- **视域图网络计算**
+
 
 
 ## **介绍**
@@ -48,7 +66,7 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
 
 - 进入Release界面
-	- 完全版：推荐选择 UrbanXTools_v3.0.0（已经包含以下多种版本）
+	- 完全版：推荐选择 UrbanXTools_v2.2.0（已经包含以下多种版本）
 	
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 

@@ -1,5 +1,8 @@
 # UrbanXTools
 
+## **Language**
+[Chinese]
+[Engilish](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README.md)
 
 ##  **目录**
   * [**介绍**](#介绍)
@@ -10,7 +13,7 @@
 
 
 ## **介绍**
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro_01.png)
 ### 1. 主要功能
 - **自动生成城市设计体块**：基于城市规划设计逻辑和计算机算法，快速生成符合上位规划管控指标的城市设计方案草模；
 - **城市设计方案的评估**：基于多专业协同理念和可持续发展目标，即时对城市设计方案进行评估；
@@ -85,9 +88,9 @@
 [案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
 ### 2. 辅助控规
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%85%AC%E6%9C%8D%E8%A6%86%E7%9B%96%E6%BC%94%E7%A4%BA.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/6_RegulatoryPlanning.png)
 
-[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
+[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/6_RegulatoryPlanning)
 
 ### 3. 城市设计方案自动生成
 - 居住建筑
@@ -106,29 +109,29 @@
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
 
-[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
+[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
 
 ### 5. 城市设计方案的可持续性分析
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/7_ResourceDemand.png)
 
-[案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
+[案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
 ### 6. 城市设计方案曝光度分析（2D）
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
 
 [案例: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 ### 7. 城市设计方案曝光度分析（3D）
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
 
 [案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 ### 8. 城市设计方案曝光度分析（3D Mesh）
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/VisSyntax.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
 
 [案例: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
@@ -175,7 +178,7 @@ NetworkStructure_Computing3D
     - 清洗过后的道路曲线
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_Computing.png)
  
 
 NetworkStructure_SiteAccessibility
@@ -190,7 +193,7 @@ NetworkStructure_SiteAccessibility
     - 地块可达性得分
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_SiteAccessibility.png)
  
 
 NetworkStructure_RoadDensity
@@ -205,7 +208,7 @@ NetworkStructure_RoadDensity
     - 道路网位于边界范围以内的部分
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadDensity.png)
 
 2. 辅助控规
 RegulatoryPlanning_GeneratingSites
@@ -223,7 +226,7 @@ RegulatoryPlanning_GeneratingSites
     - 地块面
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_GeneratingSites.png)
  
 
 RegulatoryPlanning_ClusteringBlocks
@@ -239,7 +242,7 @@ RegulatoryPlanning_ClusteringBlocks
     - 包含所有聚类结果的对象，可用于RegulatoryPlanning_LanduseAllocation组件中
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClusteringBlocks.png)
  
 
 RegulatoryPlanning_ClusteringPoints
@@ -254,7 +257,7 @@ RegulatoryPlanning_ClusteringPoints
     - 包含所有聚类结果的对象，可用于RegulatoryPlanning_LanduseAllocation组件中
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClusteringPoints.png)
 
 RegulatoryPlanning_LanduseAllocation
 - **目的**：
@@ -271,7 +274,7 @@ RegulatoryPlanning_LanduseAllocation
     - 包含用地性质分配所有计算结果的对象，该对象将用于RegulatoryPlanning_FarAllocation组件中
 - **示例**：
  
-  ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+  ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RP_LanduseAllocation.png)
 
 RegulatoryPlanning_FarAllocation
 - **目的**：
@@ -284,7 +287,7 @@ RegulatoryPlanning_FarAllocation
     - 每个地块面被赋予的容积率属性
 - **示例**：
  
-  ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+  ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RP_FARAllocation.png)
 
 3. 城市设计
 UrbanDesign_SiteParameter
@@ -298,7 +301,7 @@ UrbanDesign_SiteParameter
     - 各地块的参数
 - **示例**：
 
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameter.png)
 
 UrbanDesign_SiteParameterExtra
 - **目的**：
@@ -317,7 +320,7 @@ UrbanDesign_SiteParameterExtra
     - 各地块设置后的参数
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameterExtra.png)
 
 UrbanDesign_SiteGeneratePlans
 - **目的**：
@@ -339,7 +342,7 @@ UrbanDesign_SiteGeneratePlans
     - 各建筑的各体块的建筑功能，与上述的“各建筑的所有体块”的顺序一一对应
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteGeneratePlans.png)
  
 
 4. 公服覆盖
@@ -354,7 +357,7 @@ FacilityAnalysis_ConnectToNetwork
     - 各地块与邻近道路的连线
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_ConnectToNetwork.png)
  
 
 FacilityAnalysis_CoverageArea
@@ -369,7 +372,7 @@ FacilityAnalysis_CoverageArea
     - 被设施覆盖的地块的中心点
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_CoverageArea.png)
  
 
 5. 多维评估
@@ -382,7 +385,7 @@ SustainabilityAnalysis_Energy
     - 各建筑的能源消耗量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Energy.png)
  
 
 SustainabilityAnalysis_EnergyCarbonEmissions
@@ -394,7 +397,7 @@ SustainabilityAnalysis_EnergyCarbonEmissions
     - 生产给定的能源消耗量所产生的碳排放（单位：吨二氧化碳/年）
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_E_CarbonEmissions.png)
  
 
 SustainabilityAnalysis_Water
@@ -406,7 +409,7 @@ SustainabilityAnalysis_Water
     - 各建筑的水资源消耗量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Water.png)
  
 
 SustainabilityAnalysis_Waste
@@ -418,7 +421,7 @@ SustainabilityAnalysis_Waste
     - 各建筑的垃圾产生量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Garbage.png)
  
 
 SustainabilityAnalysis_WasteCarbonEmissions
@@ -431,7 +434,7 @@ SustainabilityAnalysis_WasteCarbonEmissions
     - 处理给定的生活垃圾产生量所产生的碳排放（单位：吨二氧化碳/年）
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_G_CarbonEmissions.png)
  
 
 SustainabilityAnalysis_EnergyCustom
@@ -444,7 +447,7 @@ SustainabilityAnalysis_EnergyCustom
     - 各建筑体块的能源消耗量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_EnergyCustom.png)
  
 
 SustainabilityAnalysis_WaterCustom
@@ -457,7 +460,7 @@ SustainabilityAnalysis_WaterCustom
     - 各建筑体块的水资源消耗量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_WaterCustom.png)
  
 
 SustainabilityAnalysis_WasteCustom
@@ -470,7 +473,7 @@ SustainabilityAnalysis_WasteCustom
     - 各建筑体块的垃圾产生量
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_GarbageCustom.png)
  
 
 SustainabilityAnalysis_Population
@@ -482,7 +485,7 @@ SustainabilityAnalysis_Population
     - 各建筑体块的估算居住人口
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Population.png)
 
 6. 视线分析
 VisibilityAnalysis_ExposureRate2D
@@ -499,7 +502,7 @@ VisibilityAnalysis_ExposureRate2D
     - 基底轮廓线对应的曝光率
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate2D.png)
  
 
 VisibilityAnalysis_GenerateMeshBuilding
@@ -512,7 +515,7 @@ VisibilityAnalysis_GenerateMeshBuilding
     - GenerateMesh类对象
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh.png)
  
 
 VisibilityAnalysis_GenerateMesh
@@ -524,7 +527,7 @@ VisibilityAnalysis_GenerateMesh
     - GenerateMesh类对象
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh_Mesh.png)
 
 VisibilityAnalysis_ExposureRate3DBuildings
 - **目的**：
@@ -540,7 +543,7 @@ VisibilityAnalysis_ExposureRate3DBuildings
     - 各视点的曝光率
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D.png)
 
 VisibilityAnalysis_ExposureRate3DMesh
 - **目的**：
@@ -555,7 +558,7 @@ VisibilityAnalysis_ExposureRate3DMesh
     - 各视点的曝光率
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D_Mesh.png)
 
 VisibilityAnalysis_VisualCalc
 - **目的**：
@@ -573,7 +576,7 @@ VisibilityAnalysis_VisualCalc
     - 染色的Mesh面（取决于是否选择输出Mesh面）
 - **示例**：
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualCalc.png)
 
 VisibilityAnalysis_VisualSyntaxComputing
 - **目的**：
@@ -591,7 +594,7 @@ VisibilityAnalysis_VisualSyntaxComputing
     - Normalized visual choice
 - **示例**：
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualSyntaxCompute.png)
 
 ### 6. 水管网计算（Coming Soon）
 <details>

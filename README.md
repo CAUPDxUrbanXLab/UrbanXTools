@@ -1,19 +1,19 @@
 # UrbanXTools
 
 ## **Language**
-[Chinese]()
+[Chinese](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README_CN.md)
 [Engilish]
 
 ##  **Content**
-  * [**介绍**](#介绍)
-  * [**安装步骤**](#安装步骤)
-  * [**演示**](#演示)
-  * [**工具内容**](#工具内容)
-  * [**许可证**](#许可证)
+  * [**Introduction**](#Introduction)
+  * [**Installation**](#Installation)
+  * [**Samples**](#Samples)
+  * [**Tools**](#Tools)
+  * [**License**](#License)
 
 
 ## **Introduction**
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro_01.png)
 ### 1. Main Functions
 - **Autogeneration of spatial models**: by integrating urban planning logics and computer algorithms, UrbanXTools can rapidly generate rudimentary spatial models for urban design projects. The spatial model will be complied with superior plans and regulations.
 - **Assessment of urban design projects**: UrbanXTools can provide instant assessment of urban design projects based on multi-disciplinary features and sustainable development goals.
@@ -86,23 +86,23 @@
 
 ## **Samples**
 ### 1. Network Structure
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84%E8%AE%A1%E7%AE%97%E6%BC%94%E7%A4%BA.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/1_%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84.png)
 
 [Sample: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
 ### 2. Aided Regulatory Planning
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%85%AC%E6%9C%8D%E8%A6%86%E7%9B%96%E6%BC%94%E7%A4%BA.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/6_RegulatoryPlanning.png)
 
-[Sample: AidedRegulatoryPlanning](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
+[Sample: AidedRegulatoryPlanning](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/6_RegulatoryPlanning)
 
 ### 3. Urban Design Autogeneration
 - Residential buildings
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E4%BD%8F%E5%AE%85%E8%A1%8C%E5%88%97%E5%BC%8F%2B%E7%82%B9%E5%BC%8F.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/3_ResidentalAutoGeneration.png)
 
 - Commercial buildings + Warehouses + Factories
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E5%95%86%E4%B8%9A%2B%E4%BB%93%E5%82%A8%2B%E5%B7%A5%E5%8E%82.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/4_BusniessAutoGeneration.png)
 
 [Sample: UrbanDesign_SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
@@ -110,31 +110,31 @@
 
 ### 4. Coverage Analysis of Public Facilities
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/2_FacilityCoverage.png)
 
-[Sample: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
+[Sample: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
 
 ### 5. Sustainability Analysis of Urban Design Projects
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/7_ResourceDemand.png)
 
-[Sample: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
+[Sample: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
 ### 6. Exposure Rate Analysis of Urban Design Projects (2D)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
 
 [Sample: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 ### 7. Exposure Rate Analysis of Urban Design Projects (3D)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
 
 [Sample: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 ### 8. Exposure Rate Analysis of Urban Design Projects (3D_Mesh)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/VisSyntax.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
 
 [Sample: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
@@ -184,7 +184,7 @@
     - Cleaned road-segments
 - **Sample**:
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_Computing.png)
 
 
 NetworkStructure_SiteAccessibility
@@ -199,7 +199,7 @@ NetworkStructure_SiteAccessibility
     - Accessibility scores of sites, with the same sequence as polygons above
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_SiteAccessibility.png)
 
 
 NetworkStructure_RoadDensity
@@ -214,7 +214,7 @@ NetworkStructure_RoadDensity
     - Road segments "cookie-cut" (intersected) by the given boundary
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadDensity.png)
 
 
 2. Regulatory Planning
@@ -233,7 +233,7 @@ RegulatoryPlanning_GeneratingSites
     - All generated site polygons
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_GeneratingSites.png)
 
 
 RegulatoryPlanning_ClusteringBlocks
@@ -249,7 +249,7 @@ RegulatoryPlanning_ClusteringBlocks
     - An object containing all the information of the clustering results to be used in the RegulatoryPlanning_LanduseAllocation component
 - **Sample**:
  
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClusteringBlocks.png)
 
 RegulatoryPlanning_ClusteringPoints
 - **Purpose**:
@@ -263,7 +263,7 @@ RegulatoryPlanning_ClusteringPoints
     - An object containing all the information of the clustering results to be used in the RegulatoryPlanning_LanduseAllocation component
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClusteringPoints.png)
 
 RegulatoryPlanning_LanduseAllocation
 - **Purpose**:
@@ -280,7 +280,7 @@ RegulatoryPlanning_LanduseAllocation
     - The object containing all the results of landuse allocation, which is useful for the RegulatoryPlanning_FarAllocation component
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RP_LanduseAllocation.png)
 
 
 RegulatoryPlanning_FarAllocation
@@ -294,7 +294,7 @@ RegulatoryPlanning_FarAllocation
     - Allocated FAR for each site
 - **Sample**:
  
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RP_FARAllocation.png)
 
 
 3. Urban Design
@@ -309,7 +309,7 @@ UrbanDesign_SiteParameter
     - Initial parameters for all the sites
 - **Sample**:
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameter.png)
 
 UrbanDesign_SiteParameterExtra
 - **Purpose**:
@@ -328,7 +328,7 @@ UrbanDesign_SiteParameterExtra
     - Adjusted parameters for each site
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameterExtra.png)
 
 
 UrbanDesign_SiteGeneratePlans
@@ -351,7 +351,7 @@ UrbanDesign_SiteGeneratePlans
     - Functions of each brep of each building, corresponding to building breps
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteGeneratePlans.png)
 
 
 4. Facility Analysis
@@ -366,7 +366,7 @@ FacilityAnalysis_ConnectToNetwork
     - New road segments after computing the connection
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_ConnectToNetwork.png)
 
 
 FacilityAnalysis_CoverageArea
@@ -381,7 +381,7 @@ FacilityAnalysis_CoverageArea
     - Centroids of all covered sites
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_CoverageArea.png)
 
 
 5. Sustainability Analysis
@@ -394,7 +394,7 @@ SustainabilityAnalysis_Energy
     - Energy consumption of each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Energy.png)
 
 
 SustainabilityAnalysis_EnergyCarbonEmissions
@@ -406,7 +406,7 @@ SustainabilityAnalysis_EnergyCarbonEmissions
     - Carbon emissions for generating the given amount of energy (Unit: tCO2/year)
 - **Sample**:
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_E_CarbonEmissions.png)
 
 
 SustainabilityAnalysis_Water
@@ -418,7 +418,7 @@ SustainabilityAnalysis_Water
     - Water consumption of each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Water.png)
 
 
 SustainabilityAnalysis_Waste
@@ -430,7 +430,7 @@ SustainabilityAnalysis_Waste
     - Waste production of each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Garbage.png)
 
 
 SustainabilityAnalysis_WasteCarbonEmissions
@@ -443,7 +443,7 @@ SustainabilityAnalysis_WasteCarbonEmissions
     - Carbon emissions for waste treatment (Unit: tons CO2/year)
 - **Sample**:
  
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_G_CarbonEmissions.png)
 
 
 SustainabilityAnalysis_EnergyCustom
@@ -456,7 +456,7 @@ SustainabilityAnalysis_EnergyCustom
     - Energy consumption for each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_EnergyCustom.png)
 
 
 SustainabilityAnalysis_WaterCustom
@@ -469,7 +469,7 @@ SustainabilityAnalysis_WaterCustom
     - Water consumption for each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_WaterCustom.png)
 
 
 SustainabilityAnalysis_WasteCustom
@@ -482,7 +482,7 @@ SustainabilityAnalysis_WasteCustom
     - Waste production for each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_GarbageCustom.png)
 
 
 SustainabilityAnalysis_Population
@@ -494,7 +494,7 @@ SustainabilityAnalysis_Population
     - Estimated population of each building
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Population.png)
 
 
 6. Visibility Analysis
@@ -512,7 +512,7 @@ VisibilityAnalysis_ExposureRate2D
     - Exposure rate for brep outlines
 - **Sample**:
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate2D.png)
 
  
 
@@ -526,7 +526,7 @@ VisibilityAnalysis_GenerateMeshBuilding
     - GenerateMesh Class
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh.png)
 
 
 VisibilityAnalysis_GenerateMesh
@@ -538,7 +538,7 @@ VisibilityAnalysis_GenerateMesh
     - GenerateMesh Class
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh_Mesh.png)
 
 
 VisibilityAnalysis_ExposureRate3DBuildings
@@ -555,7 +555,7 @@ VisibilityAnalysis_ExposureRate3DBuildings
     - Exposure rates for each view point
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D.png)
 
 
 VisibilityAnalysis_ExposureRate3DMesh
@@ -571,7 +571,7 @@ VisibilityAnalysis_ExposureRate3DMesh
     - Exposure rates for each view point
 - **Sample**:
  
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D_Mesh.png)
 
 
 VisibilityAnalysis_VisualCalc
@@ -589,7 +589,7 @@ VisibilityAnalysis_VisualCalc
     - Visibility properties of each road
     - Colored mesh (depending on whether you choose to output mesh)
 - **Sample**:
- ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualCalc.png)
 
 
 VisibilityAnalysis_VisualSyntaxComputing
@@ -607,7 +607,7 @@ VisibilityAnalysis_VisualSyntaxComputing
     - Normalized visual integration
     - Normalized visual choice
 - **Sample**:
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualSyntaxCompute.png)
 
 
 ### 6. WaterPipeNetwork_Calculation（Coming Soon）

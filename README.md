@@ -134,7 +134,7 @@
 
 ### 8. Exposure Rate Analysis of Urban Design Projects (3D_Mesh)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/8_Exposure.png)
 
 [Sample: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 

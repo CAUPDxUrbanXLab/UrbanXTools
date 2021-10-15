@@ -119,7 +119,7 @@
 
 ### 6. 城市设计方案曝光度分析（2D）
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/8_Exposure.png)
 
 [案例: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 

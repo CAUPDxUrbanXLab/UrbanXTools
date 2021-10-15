@@ -12,560 +12,630 @@
   * [**许可证**](#许可证)
 
 
-## **介绍**
+## **Introduction**
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro.png)
-### 1. 主要功能
-- 基于城市规划设计逻辑和计算机算法，快速生成符合上位规划管控指标的城市设计方案草模；
-- 基于多专业协同理念和可持续发展目标，即时对城市设计方案进行评估；
-- 依托参数化设计方法，建立控规详规与城市设计方案快速评估、反馈、修改的机制，提高设计效率与方案质量。
-### 2. 目标
-- 高质量
-- 可持续城市发展
-### 3. 研发人员
-- 杨滔、罗维祯、林旭辉、邓成汝、董雨菲
-### 4. 合作单位
-- 中国城市规划设计研究院——城市设计分院
-### 5. 注意事项
-- 推荐使用Rhino version 6.30 ， 如使用Rhino版本低于6.30， 请于release下载v6.12插件；
-- 模型单位必须使用米（model unit: meter），如使用毫米则无法进行方案自动生成；
-- 如方案距离工作视图原点较远时，由于Rhinocommon几何运算精度限制，几何布尔运算有一定概率出现问题，因此请将路网地块等几何数据移动至原点（0，0，0）附近；
-- 如有运行问题或功能需求，可在github issue里提出，开发者会尽力解决。
+### 1. Main Functions
+- **Autogeneration of spatial models**: by integrating urban planning logics and computer algorithms, UrbanXTools can rapidly generate rudimentary spatial models for urban design projects. The spatial model will be complied with superior plans and regulations.
+- **Assessment of urban design projects**: UrbanXTools can provide instant assessment of urban design projects based on multi-disciplinary features and sustainable development goals.
+- **Construction of a feedback loop**: by using parametric design methods, we aim to construct a mechanism for regulatory plans and urban design projects to get instant assessments, feedbacks and modifications. With this mechanism, the efficiency and quality of urban design could be enhanced
 
-## **安装步骤**
-- 下载链接：
-	- 蓝奏云盘
-		- 链接：https://wwe.lanzoui.com/b01tqy68f
-		- 密码: h5d8
-	- 百度网盘
-		- 链接：链接：https://pan.baidu.com/s/1acBnxjOD2pCm4wnlYHIOzg  
-		- 密码：gz4u
-	- Github下载
-		- 链接：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases
-### 1. 进入Release界面，选择合适版本，下载zip文件，解压并取出(版本号以最新版为准)
+### 2. Objectives
+- High quality
+- Sustainable urban development
+### 3. Developers
+- Tao Yang, Weizhen Luo, Xuhui Lin, Chengru Deng, Yufei Dong
+### 4. Translating Contributor
+- Yihan Zhang
+### 5. Notifications
+- Rhino version 6.14 and above are recommended. 
+- Model unit MUST BE METER, and models cannot be generated if your model unit is millimeter (mm)
+- Please put your geometric objects, such as roads and land parcels, near the origin of coordinates (0, 0, 0). Confined by computation accuracy of geometric objects in RhinoCommon, the geometric Boolean operation might go wrong if you put your model too faraway from the origin point.
+- If you encounter any other problems or have any demands and suggestions, please let us know via Github Issues. We'll try our best to help.
 
-- 点击进入Release界面
+
+## **Installation**
+- Download UrbanXTools：
+	- Lanzou NetDisk
+		- Link：https://wwe.lanzoui.com/b01tqy68f
+		- Password: h5d8
+	- Baidu NetDisk
+		- Link：https://pan.baidu.com/s/1acBnxjOD2pCm4wnlYHIOzg  
+		- Password：gz4u
+	- Github
+		- Link：https://github.com/CAUPDxUrbanXLab/UrbanXTools/releases
+### 1. Enter Releases, choose a compatible version, download the zip file and extract (please choose the latest version)
+
+- Click to enter Releases
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
 
-- 进入Release界面
-	- 完全版：推荐选择 UrbanXTools_v3.0.0（已经包含以下多种版本）
+- Within the Releases page, please download:
+	- Full version: UrbanXTools_v3.0.0 is recommended
 	
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 
-- 取出文件夹：UrbanXTools_v.2.2.0
+- Extract the zip file: UrbanXTools_v3.0.0
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_002.png)
 
-### 2. 打开Rhino，打开Grasshopper，进入Component File
+### 2. Open Grasshopper in Rhino, enter Components Folder
 
-- 打开Rhino，打开Grasshopper，点击 File --> Special Folders --> Components Folder 
+- Open Rhino and then Grasshopper, open File --> Special Folders --> Components Folder
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003.png)
 
-- 将文件夹：UrbanXTools_v.2.2.0 置入
-- 如果文件夹中存在 UrbanXTools_v.1.0.0，或 UrbanXTools_v.2.0.0 请将该文件夹全部删除，置入UrbanXTools_v.2.2.0
+- Copy and paste the whole UrbanXTools_v3.0.0 folder here
+- If you already have UrbanXTools_v.1.0.0 or UrbanXTools_v.2.0.0 in this folder, please delete them in advance.
+
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003_1.png)
 
-### 3. 检查文件夹内容完整性，重启Rhino
+### 3. Check your UrbanXTools_v3.0.0 folder and then restart Rhino
 
-- 确保文件夹里，有如下文件
+- Make sure every file listed below are also in your UrbanXTools_v3.0.0 folder
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_004.png)
 
-### 4. 顺利置入
+### 4. Finish
 
-- 如顺利置入，界面如下
+- If you have successfully installed UrbanXTools, you'll get this in your Grasshopper
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_005.png)
 
 
 
-
-## **演示**
-### 1. 空间结构交互性评估
+## **Samples**
+### 1. Network Structure
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84%E8%AE%A1%E7%AE%97%E6%BC%94%E7%A4%BA.gif)
 
-[案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
+[Sample: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
-### 2. 公共服务设施覆盖分析
+### 2. Aided Regulatory Planning
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%85%AC%E6%9C%8D%E8%A6%86%E7%9B%96%E6%BC%94%E7%A4%BA.gif)
 
-[案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
+[Sample: AidedRegulatoryPlanning](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
 
-### 3. 城市设计方案自动生成
-- 住宅行列式+点式
+### 3. Urban Design Autogeneration
+- Residential buildings
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E4%BD%8F%E5%AE%85%E8%A1%8C%E5%88%97%E5%BC%8F%2B%E7%82%B9%E5%BC%8F.gif)
 
-- 商业+仓储+工厂
+- Commercial buildings + Warehouses + Factories
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E5%95%86%E4%B8%9A%2B%E4%BB%93%E5%82%A8%2B%E5%B7%A5%E5%8E%82.gif)
 
-[案例: UrbanDesign SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
+[Sample: UrbanDesign_SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
-[案例: UrbanDesign_MultiSitesSites](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
+[Sample: UrbanDesign_MultiSitesSites](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
-### 4. 城市设计方案资源荷载计算
+### 4. Coverage Analysis of Public Facilities
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
 
-[案例: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
+[Sample: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/4_ResourcesDemand)
 
-### 5. 城市设计方案曝光度分析2D
+### 5. Sustainability Analysis of Urban Design Projects
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
 
-[案例: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
+[Sample: Resources Demand](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/5_SpatialAnalysis)
 
-### 6. 城市设计方案曝光度分析3D
+### 6. Exposure Rate Analysis of Urban Design Projects (2D)
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D.png)
 
-[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+[Sample: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
-### 7. 城市设计方案曝光度分析3D_Mesh
+### 7. Exposure Rate Analysis of Urban Design Projects (3D)
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
 
-[案例: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+[Sample: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
-### 8. 城市设计方案视觉图结构计算
+### 8. Exposure Rate Analysis of Urban Design Projects (3D_Mesh)
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/VisSyntax.png)
 
-[案例: ExposureRates3D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+[Sample: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
+
+### 9. Visual Graph Network Analysis of Urban Design Projects
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/VisSyntax.png)
+
+[Sample: ExposureRates3D_visualGraphNetwork](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
 
-## **工具内容**
+## **Tools**
 
-### 1. 空间结构分析
+### 1. Network Structure
 
 > Network_RoadsSplitter
 
-- **目的**：
-    - 清洗和分割所有道路曲线，处理情况包括：重叠、形状相同和无效曲线。
-- **输入**：
-    - 待清洗、分割的道路曲线
-- **输出**：
-    - 清洗并分割完成的道路曲线
-- **样例展示**：
+- **Purpose**：
+    - Clean and split the curves to handle degeneracies, such as overlaps, identical shapes, invalid curves, etc.
+- **Input**：
+    - Original curves
+- **Output**：
+    - Cleaned and split curves
+- **Sample**：
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
 
-> Network_ClearSiteData
+> NetworkStructure_Computing3D
+- **Purpose**: 
+    - This command computes network properties, including angular distance and metric distance in space syntax. You may choose different radius for calculation.
+    - Betweenness: Within a certain distance, this command finds the shortest paths between any pair of points and counts the number of times each road segment is passed.
+    - Closeness: Within a certain distance, compute the average distance from this point to a specified destination point along the shortest paths.
+- **Input**: 
+    - Road network of 2D or 3D geometries
+    - Radius
+    - Merging or not
+- **Output**: 
+    - Metric choice
+    - Metric integration
+    - Metric mean depth
+    - Metric total depth
+    - Angular choice
+    - Angular integration
+    - Angular mean depth
+    - Angular total depth
+    - Normalized angular choice(NACH)
+    - Normalized angular integration(NAIN)
+    - Cleaned road-segments
+- **Sample**:
 
-- **目的**：
-    - 清洗所有地块曲线，处理情况包括：重叠、形状相同、非平面、非闭合地块曲线。
-- **输入**：
-    - 待清洗的地块曲线
-- **输出**：
-    - 清洗完成的道路曲线
-- **样例展示**：
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_ClearSiteData.png)
 
-> Network_Computing
-
-- **目的**：
-    - 计算道路网络性质，包括按米制、按角度制的空间句法，可选择不同半径进行计算
-    - 介数中心性(betweenness): 在一定范围内，找出网络中任意两点的最短经，并计算每段道路被经过的次数
-    - 紧密中心性(closeness): 在一定范围内，从该点到沿最短路径的指定目标点所需的平均距离
-- **输入**：
-    - 需要计算的路网曲线
-    - 计算半径
-    - 是否需要标准化
-- **输出**：
-	 - Metric choice
-	 - Metric integration
-	 - Metric mean depth
-	 - Metric total depth
-
-	 - Angular choice
-	 - Angular integration
-	 - Angular mean depth
-	 - Angular total depth
+NetworkStructure_SiteAccessibility
+- **Purpose**:
+    - This command computes the accessibility scores of sites
+- **Input**:
+    - Cleaned road segments
+    - Accessibility scores of each road segment
+    - Curves of site boundaries
+- **Output**:
+    - Polygons generated by site boundaries
+    - Accessibility scores of sites, with the same sequence as polygons above
+- **Sample**:
  
-	 - Normalized angular choice(NACH)
-	 - Normalized angular integration(NAIN)
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_Computing.png)
-
-> Network_SiteAccessibility
-
-- **目的**：
-    - 计算地块可达性
-- **输入**：
-    - 地块周边路网曲线
-    - 周边路网曲线对应数值
-    - 需要计算的地块曲线
-- **输出**：
-    - 由地块曲线围合而成的地块平面
-    - 地块可达性得分
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_SiteAccessibility.png)
-
-> Network_RoadDensity
-
-- **目的**：
-    - 基于特定边界，计算路网密度
-- **输入**：
-    - 输入需要计算的路网曲线
-    - 输入对应路网的边界线
-- **输出**：
-    - 输出道路网密度（数据）
-    - 输出道路网密度（单位：km/km²）
-    - 输出边界内容道路曲线
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadDensity.png)
-
-### 2. 设施计算
-
-> Facility_ToNetwork
-
-- **目的**：
-    - 计算地块几何中心，连接到周边最近路段，并将新路段添加到已有道路网络
-- **输入**：
-	- 清洗处理后的路网
-	- 全部需计算地块
-- **输出**：
-  - 新建路网图结构数据，用于路网密度计算
-  - 新建路网线段几何数据
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_ConnectToNetwork.png)
-
-> Facility_CoverageArea
-
-- **目的**：
-    - 按照路网距离计算设施覆盖范围
-- **输入**：
-  - 路网图结构数据，连接Facility_ToNetwork的RoadsNetwork输出端
-  - 公服设施地块，覆盖范围计算起点
-  - 公服设施覆盖半径，按照真实路网距离进行计算
-- **输出**：
-  - 覆盖范围内的地块
-  - 覆盖范围内地块的几何中点
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/FL_CoverageArea.png)
-
-### 3. 自动生成
-
-> Urban_DesignCalculator
-- **目的**：
-    - 计算在特定场地内，可容纳的建筑数量和楼层，以实现给定 FAR 和密度的目标
-- **输入**：
-    - 输入场地曲线
-    - 输入建筑原型的平面线稿
-    - 输入每一种建筑类型的层数范围
-    - 输入目标容积率FAR
-    - 输入目标建筑密度
-- **输出**：
-    - 可容纳的建筑数量
-    - 可容纳的建筑楼层数
-    - 现有地块FAR容积率
-    - 现有地块建筑密度
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DesignCalculator.png)
-
-
-> Urban_DynamicSplit
-- **目的**：
-    - 使用Binary Partition Tree算法，基于容积率，对地块进行精确划分。
-- **输入**：
-    - 输入准备切分的场地曲线
-    - 输入场地对应的目标面积或比例
-    - 输入场地对应的优先等级
-    - 输入场地边界框的可达性得分
-    - 输入场地边界框的角度
-    - 在动态切分时，是否改变角度
-- **输出**：
-    - 输出子地块边线
-    - 输出子地块边界框
-    - 输出子地块边界性得分
-    - 输出子地块角度
-    - 输出子地块ID
-    - 输出Binary Partition Tree的可视化结果
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_DynamicSplit.png)
-
-
-> Urban_ResidentialLimitation
-- **目的**：
-    - 输入场地、及所在城市，计算该场地可达到的最大容积率及建筑密度
-- **输入**：
-    - 输入准备进行计算的场地曲线
-    - 输入城市序号，获得气象信息
-    - 输入该场地能容纳的最大限高
-    - 输入住宅层数高度，默认为3米
-    - 输入住宅朝向角度，默认为0度
-    - 输入住宅深度，默认为26米
-- **输出**：
-    - 输出场地可容纳的最大容积率
-    - 输出场地可容纳的最大建筑密度
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_ResidentialLimitations.png)
-
-
-> Urban_SiteParameter
-- **目的**：
-    - 基于道路、道路可达性得分及场地数据，形成自生成参数
-- **输入**：
-    - 输入道路曲线
-    - 输入道路可达性得分
-    - 输入场地曲线
-- **输出**：
-    - 输出 Urban_SiteParameter 类
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameter.png)
-
-
-> Urban_SiteParameterExtra
-- **目的**：
-    - 调整地块参数（容积率、建筑密度等），设计参数调整功能
-- **输入**：
-    - 输入 Urban_SiteParameter 类
-    - 输入场地对应的用地属性（R:0, C:1, GIC:2, M:3, W:4）
-    - 输入场地对应的容积率FAR
-    - 输入场地对应的建筑密度
-    - 输入场地对应的混合度
-    - 输入场地对应的建筑风格（住宅：风格0_行列式，风格1_点式|| 非住宅：风格0_点式，风格1_围合式，风格2_混合式 ）
-    - 输入场地对应的朝向角度
-- **输出**：
-    - 输出 Urban_SiteParameter 类
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/UD_SiteParameterExtra.png)
-
-
-> Urban_SiteGeneratePlans
-- **目的**：
-    - 基于输入参数，建筑体块方案自动生成，得到生成结果
-- **输入**：
-    - 输入 Urban_SiteParameter 类
-    - 输入所在城市序号
-- **输出**：
-    - 输出 Urban_SiteResult 类
-    - 输出原始场地曲线（尚未切分）
-    - 输出场地对应的容积率FAR
-    - 输出场地对应的建筑密度
-    - 输出场地对应的子地块曲线
-    - 输出子地块的场地退线
-    - 输出每个建筑对应的层数（curve）
-    - 输出每个建筑对应的屋顶线 (curve)
-    - 输出每个建筑对应的层数（int）
-    - 输出每个建筑对应的体块 (brep)
-    - 输出每个建筑对应的功能 (string)
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/Urban_SiteGeneratePlan.png)
-
-
-### 4. 资源指标计算
-> Resources_Energy
-
-- **目的**：
-    - 计算自生成设计方案里，每个建筑的能源消耗量
-- **输入**：
-    - 输入Urban_SiteGeneratePlans 类
-- **输出**：
-    - 输出对应楼块的能源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Energy.png)
-
-
-> Resources_Water
-- **目的**：
-    - 计算自生成设计方案里，每个建筑的水资源消耗量
-- **输入**：
-    - 输入Urban_SiteGeneratePlans 类
-- **输出**：
-    - 输出对应楼块的水资源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Water.png)
-
-
-> Resources_Garbage
-- **目的**：
-    - 计算自生成设计方案里，每个建筑的固废产生量
-- **输入**：
-    - 输入Urban_SiteGeneratePlans 类
-- **输出**：
-    - 输出对应楼块的固废产生量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Garbage.png)
-
-
-> Resources_EnergyCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的能源消耗量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的能源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_EnergyCustom.png)
-
-
-> Resources_WaterCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的水资源消耗量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的水资源消耗量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_WaterCustom.png)
-
-> Resources_GarbageCustom
-- **目的**：
-    - 根据建筑体块及功能，计算每个建筑的固废产生量
-- **输入**：
-    - 输入建筑体块、及其对应的建筑功能
-- **输出**：
-    - 输出对应体块的固废产生量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_GarbageCustom.png)
-
-> Resources_Population
-- **目的**：
-    - 根据建筑体块，计算每个建筑的可容纳人口量
-- **输入**：
-    - 输入建筑体块
-- **输出**：
-    - 输出对应体块的容纳人口量
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/RD_Population.png)
-
-### 5. 空间指标计算
-> Spatial_Analysis_Exposure2D
-- **目的**：
-    - 根据道路节点，计算建筑底商的空间曝光率，为商业选址提供空间数据支持
-- **输入**：
-    - 输入建筑体块、预设置的可视节点、是否标准化、可视半径、细分程度（该数值越高，结果越准确，计算速度越慢）
-- **输出**：
-    - 输出建筑基底轮廓线、轮廓线对应曝光率
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate2D.png)
-
-> Spatial_Analysis_GenerateMesh
-- **目的**：
-    - 根据细分程度，将建筑Brep面转化为DMesh面，提高计算效率。
-- **输入**：
-    - 输入建筑体块、细分程度（默认值为-1）（该数值越高，结果越准确，计算速度越慢）
-- **输出**：
-    - 输出GenerateMesh Class（包含建筑Mesh面，建筑立面面积，建筑中心点）
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh.png)
-
-> Spatial_Analysis_GenerateMesh_Mesh
-- **目的**：
-    - 根据细分程度，将Mesh面转化为DMesh面，提高计算效率。
-- **输入**：
-    - 输入建筑体块
-- **输出**：
-    - 输出GenerateMesh Class（包含建筑Mesh面，建筑立面面积，建筑中心点）
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_GenerateMesh_Mesh.png)
-
-> Spatial_Analysis_Exposure3D_Buildings
-- **目的**：
-    - 根据可视点选择，计算建筑三维体块的空间曝光率，为商业选址提供空间数据支持
-- **输入**：
-    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
-- **输出**：
-    - 输出建筑Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D.png)
-
-> Spatial_Analysis_Exposure3D_Mesh
-- **目的**：
-    - 根据可视点选择，计算Mesh物体的空间曝光率，为商业选址提供空间数据支持
-- **输入**：
-    - 输入预设置的可视节点、GenerateMesh Class、视角范围（默认为300）
-- **输出**：
-    - 输出Mesh面（已染色），每一个点观测到的次数，可视点对应的可视率
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_ExposureRate3D_Mesh.png)
-
-> Spatial_VisualCalc
-- **目的**：
-    - 根据输入路网，计算路网的空间可视率（通过路网细分点进行计算）
-- **输入**：
-    - 输入预设置的路网、GenerateMesh Class、路网细分程度、视角范围（默认为300）、是否输出Mesh
-- **输出**：
-    - 输出路网的可视相关数值、位于路网上的点、路网对应的可视率、Mesh面（取决于是否选择输出Mesh）
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualCalc.png)
-
-> Spatial_VisualSyntaxCompute
-- **目的**：
-    - 根据输入路网，及路网对应数值，计算路网的可视网络结构
-- **输入**：
-    - 输入预设置的路网、路网对应得分、计算半径（默认为-1，即计算全局路网）
-- **输出**：
-    - visual total depth
-    - visual mean depth
-    - visual integration
-    - visual choice
-    - normalised visual integration
-    - normalised visual choice
-- **样例展示**：
-
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/SA_VisualSyntaxCompute.png)
-
-
-### 6. 水管网计算（Coming Soon）
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+NetworkStructure_RoadDensity
+- **Purpose**: 
+    - Compute road density within the given boundary
+- **Input**: 
+    - Roads to be computed
+    - Boundary
+- **Output**: 
+    - Road Density (numeric data)
+    - Road Density (unit: km/km²）
+    - Road segments "cookie-cut" (intersected) by the given boundary
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+2. Regulatory Planning
+RegulatoryPlanning_GeneratingSites
+- **Purpose**:
+    - Automatically generate sites polygon based on the input road network
+- **Input**:
+    - A list of primary roads
+    - A list of secondary roads (optional)
+    - A list of tertiary roads (optional)
+    - A list of branch roads (optional)
+    - Width of roads in the order from primary roads to branch roads
+    - Radius for rounding the site corners
+    - The boundary within which sites will be generated
+- **Output**:
+    - All generated site polygons
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+RegulatoryPlanning_ClusteringBlocks
+- **Purpose**:
+    - Clustering a set of sites based on the shortest-path distance matrix by using Hierarchical Agglomerative Clustering (HAC) algorithm
+- **Input**:
+    - Roads
+    - Sites
+    - Diameters for each clustering levels
+- **Output**:
+    - Links for visualizing the hierarchical relationships among the clusters
+    - Id for each site in the tree structure to represent the hierarchy of all clusters
+    - An object containing all the information of the clustering results to be used in the RegulatoryPlanning_LanduseAllocation component
+- **Sample**:
+ 
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+RegulatoryPlanning_ClusteringPoints
+- **Purpose**:
+    - Clustering a set of sites based on the euclidean distance matrix among all centroids of the sites by using Hierarchical Agglomerative Clustering (HAC) algorithm
+- **Input**:
+    - Centroids of each site
+    - Diameters for each clustering levels
+- **Output**:
+    - Links for visualizing the hierarchical relationships among the clusters
+    - Id for each site in the tree structure to represent the hierarchy of all clusters
+    - An object containing all the information of the clustering results to be used in the RegulatoryPlanning_LanduseAllocation component
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+RegulatoryPlanning_LanduseAllocation
+- **Purpose**:
+    - Automatically allocating landuse to each of the sites
+- **Input**:
+    - Sites
+    - Accessibility scores with different radius for each site (Recommended: 3 branches)
+    - The object containing all the information of clustering results, which is obtained from the RegulatoryPlanning_ClusteringBlocks component
+    - Landuse structure, with the order representing their priority, and their values indicating their proportion of area among all the sites respectively (Format: R:0.2)
+- **Output**:
+    - Sites, wihch may be split after the landuse allocation to fulfill the requirement of landuse structure
+    - Allocated landuse for each site, with the same sequence as the sites above
+    - Actual landuse structure
+    - The object containing all the results of landuse allocation, which is useful for the RegulatoryPlanning_FarAllocation component
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+RegulatoryPlanning_FarAllocation
+- **Purpose**:
+    - Automatically allocating floor area ratio (FAR) to each of the sites
+- **Input**:
+    - The object containing all the results of landuse allocation, obtained from the RegulatoryPlanning_LanduseAllocation component
+    - Total building area for the overall urban design
+    - Building area structure, represented by the percentage of building area of each category of landuse
+- **Output**:
+    - Allocated FAR for each site
+- **Sample**:
+ 
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+3. Urban Design
+UrbanDesign_SiteParameter
+- **Purpose**: 
+    - This command autogenerates site parameters based on roads, accessibility scores and site info.
+- **Input**:
+    - Cleaned roads
+    - Accessibility scores for each road segment
+    - Curves of site boundaries
+- **Output**:
+    - Initial parameters for all the sites
+- **Sample**:
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+UrbanDesign_SiteParameterExtra
+- **Purpose**:
+    - This command allows you to adjust site parameters, such as FAR and building density
+- **Input**:
+    - Initial parameters of all sites, obtained from the UrbanDesign_SiteParameter component
+    - Landuse Type (R:0, C:1, GIC:2, M:3, W:4)
+    - FAR
+    - Density
+    - Mixed Ratio
+    - Building Styles
+        - For residential buildings: 0-Rows, 1-Dots
+        - For non-residential buildings: 0-Dots, 1-Groups, 2-Mixed
+    - Orientation of buildings (Unit: Radians)
+- **Output**: 
+    - Adjusted parameters for each site
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+UrbanDesign_SiteGeneratePlans
+- **Purpose**:
+    - This command autogenerates building entities.
+- **Input**:
+    - Adjusted parameters for all sites, obtained from UrbanDesign_SiteParameterExtra component
+    - City ID
+- **Output**: 
+    - The object containing results of the design, which is useful for the Sustainability Analysis module
+    - Curves of original site boundaries (not split)
+    - FARs
+    - Building densities
+    - Subsite boundaries
+    - Setback boundaries for each site
+    - Outline curves of the floor layer of each building
+    - Outline curves of each building roof
+    - Numbers of levels of each building
+    - Brep geometries of each building
+    - Functions of each brep of each building, corresponding to building breps
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+4. Facility Analysis
+FacilityAnalysis_ConnectToNetwork
+- **Purpose**:
+    - Connect all sites to their nearest road segments
+- **Input**:
+    - Cleaned road network
+    - Sites
+- **Output**: 
+    - Generic parameters, which is useful for the FacilityAnalysis_CoverageArea component
+    - New road segments after computing the connection
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+FacilityAnalysis_CoverageArea
+- **Purpose**:
+    - Compute facilities' coverage area by shortest-path distances in the road network based on a given radius
+- **Input**: 
+    - Generic parameters, obtained from the FacilityAnalysis_ConnectToNetwork component
+    - Sites where public facilities locate
+    - Service radius of the facilities, which is defined as shortest paths within the road network
+- **Output**:
+    - Sites within facilities' coverage area
+    - Centroids of all covered sites
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+5. Sustainability Analysis
+SustainabilityAnalysis_Energy
+- **Purpose**:
+    - Compute the energy consumption for each building in the autogenerated plan
+- **Input**:
+    - Generic parameters containing the original results of the design, obtained from UrbanDesign_SiteGeneratePlans component
+- **Output**: 
+    - Energy consumption of each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_EnergyCarbonEmissions
+- **Purpose**:
+    - Compute the carbon emissions for generating the given amount of energy
+- **Input**:
+    - Energy consumption (Unit: kWh/year)
+- **Output**: 
+    - Carbon emissions for generating the given amount of energy (Unit: tCO2/year)
+- **Sample**:
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_Water
+- **Purpose**: 
+    - Compute the water consumption for each building in the autogenerated plan
+- **Input**: 
+    - Generic parameters containing the original results of the design, obtained from UrbanDesign_SiteGeneratePlans component
+- **Output**: 
+    - Water consumption of each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_Waste
+- **Purpose**: 
+    - Compute waste production for each building in the autogenerated plan
+- **Input**: 
+    - Generic parameters containing the original results of the design, obtained from UrbanDesign_SiteGeneratePlans component
+- **Output**: 
+    - Waste production of each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_WasteCarbonEmissions
+- **Purpose**: 
+    - Compute the carbon emissions for waste treatment
+- **Input**: 
+    - Domestic waste generation which requires further treatment (Unit: tons/year)
+    - Method of waste treatment (0-"waste_landfill", 1-"waste_incineration", 2-"waste-composting")
+- **Output**: 
+    - Carbon emissions for waste treatment (Unit: tons CO2/year)
+- **Sample**:
+ 
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_EnergyCustom
+- **Purpose**: 
+    - Compute energy consumption of buildings based on the custom input
+- **Input**:
+    - Building breps
+    - Building functions of each brep
+- **Output**:
+    - Energy consumption for each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_WaterCustom
+- **Purpose**: 
+    - Compute water consumption of buildings based on the custom input
+- **Input**: 
+    - Building breps
+    - Building functions of each brep
+- **Output**: 
+    - Water consumption for each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_WasteCustom
+- **Purpose**: 
+    - Compute waste production of buildings based on the custom input
+- **Input**:
+    - Building breps
+    - Building functions of each brep
+- **Output**:
+    - Waste production for each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+SustainabilityAnalysis_Population
+- **Purpose**:
+    - Estimated population of each residential building
+- **Input**:
+    - Building breps
+- **Output**: 
+    - Estimated population of each building
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+6. Visibility Analysis
+VisibilityAnalysis_ExposureRate2D
+- **Purpose**: 
+    - By analyzing its relationship to road intersections, this command returns 2D exposure rate for ground floor commerce, which could be a quantified spatial feature considered in commercial site selection process.
+- **Input**: 
+    - Building breps
+    - Preset view points
+    - Normalize or not
+    - Radius of viewshed
+    - Subdivision (higher value will lead to higher accuracy but also longer runtime)
+- **Output**:
+    - Outlines of building breps
+    - Exposure rate for brep outlines
+- **Sample**:
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+ 
+
+VisibilityAnalysis_GenerateMeshBuilding
+- **Purpose**:
+    - Convert buildings from Rhino Brep to DMesh according to subdivision. This command aims to improve computational efficiency.
+- **Input**: 
+    - Rhino Brep of buildings
+    - Subdivision (default as -1) (higher value will lead to higher accuracy but also longer runtime)
+- **Output**: 
+    - GenerateMesh Class
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+VisibilityAnalysis_GenerateMesh
+- **Purpose**:
+    - Convert geometry from Rhino Mesh to DMesh. This command aims to improve computational efficiency.
+- **Input**: 
+    - Mesh
+- **Output**: 
+    - GenerateMesh Class
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+VisibilityAnalysis_ExposureRate3DBuildings
+- **Purpose**:
+    - By analyzing its relationship to view points, this command returns 3D exposure rate for buildings, which could be a quantified spatial feature considered in commercial site selection process.
+- **Input**: 
+    - Preset view points
+    - GenerateMesh Class
+    - View range in each point as radius (default as 300)
+- **Output**:
+    - Colored side mesh of each building
+    - Uncolored top mesh and bottom mesh
+    - Count of each mesh got intersected
+    - Exposure rates for each view point
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+VisibilityAnalysis_ExposureRate3DMesh
+- **Purpose**:
+    - By analyzing its relationship to view points, this command returns 3D exposure rate for mesh entities which could be a quantified spatial feature considered in commercial site selection process.
+- **Input**: 
+    - Preset view points
+    - GenerateMesh Class
+    - View range in each point as radius (default as 300)
+- **Output**:
+    - Colored Mesh
+    - Count of each mesh got intersected
+    - Exposure rates for each view point
+- **Sample**:
+ 
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+VisibilityAnalysis_VisualCalc
+- **Purpose**:
+    - Compute the visibility of road network by interpolating points in 3D context
+- **Input**:
+    - Preset road network
+    - GenerateMesh Class
+    - Subdivision of roads to be divided (Unit: meter, default: 500m)
+    - View range in each point as radius (default as 300)
+    - Output Mesh or not
+- **Output**: 
+    - Cleaned roads, which is useful in the VisibilityAnalysis_VisualSyntaxComputing component
+    - Viewpoints on roads
+    - Visibility properties of each road
+    - Colored mesh (depending on whether you choose to output mesh)
+- **Sample**:
+ ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+VisibilityAnalysis_VisualSyntaxComputing
+- **Purpose**: 
+    - Compute visual graph network analysis by input road network and corresponding scores in 3D context
+- **Input**: 
+    - Cleaned roads, obtained from the VisibilityAnalysis_VisualCalc component
+    - Corresponding scores of each road
+    - Radius (default as -1, which leads to global calculation)
+- **Output**:
+    - Visual total depth
+    - Visual mean depth
+    - Visual integration
+    - Visual choice
+    - Normalized visual integration
+    - Normalized visual choice
+- **Sample**:
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/logo_24px/NA_RoadsSplitter.png)
+
+
+### 6. WaterPipeNetwork_Calculation（Coming Soon）
 <details>
-<summary>水管网计算具体参数</summary>
+<summary> WaterPipeNetwork Parameters</summary>
 
 > Water_InpFileToGeometry
-- **目的**：
-- **输入**：
-- **输出**：
-- **样例展示**：
+- **Purpose**：
+- **Input**：
+- **Output**：
+- **Sample**：
 
 > Water_CalculateSiteDemand
-- **目的**：
-- **输入**：
-- **输出**：
-- **样例展示**：
+- **Purpose**：
+- **Input**：
+- **Output**：
+- **Sample**：
 
 > Water_NetworkOptimization
-- **目的**：
-- **输入**：
-- **输出**：
-- **样例展示**：
+- **Purpose**：
+- **Input**：
+- **Output**：
+- **Sample**：
 
 </details>
 
 
-
-
-
-
-## **许可证**
+## **License**
 ### ***GNU General Public License v.3***
 *Copyright (C) 2020  Tao Yang, Weizhen Luo, Xuhui Lin, Chengru Deng*
 

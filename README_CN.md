@@ -1,7 +1,7 @@
 # UrbanXTools
 
 ## **Language**
-[Chinese]
+[中文]
 [Engilish](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README.md)
 
 ##  **目录**
@@ -13,7 +13,7 @@
 
 
 ## **介绍**
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro_01.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/intro_02.png)
 ### 1. 主要功能
 - **自动生成城市设计体块**：基于城市规划设计逻辑和计算机算法，快速生成符合上位规划管控指标的城市设计方案草模；
 - **城市设计方案的评估**：基于多专业协同理念和可持续发展目标，即时对城市设计方案进行评估；

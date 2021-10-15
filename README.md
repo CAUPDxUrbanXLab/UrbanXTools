@@ -1,7 +1,7 @@
 # UrbanXTools
 
 ## **Language**
-[Chinese](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README_CN.md)
+[中文](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README_CN.md)
 [Engilish]
 
 ##  **Content**
@@ -122,7 +122,7 @@
 
 ### 6. Exposure Rate Analysis of Urban Design Projects (2D)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%87.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/8_Exposure.png)
 
 [Sample: ExposureRates2D](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
@@ -134,7 +134,7 @@
 
 ### 8. Exposure Rate Analysis of Urban Design Projects (3D_Mesh)
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/8_Exposure.png)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E6%9B%9D%E5%85%89%E7%8E%873D_mesh.png)
 
 [Sample: ExposureRates3D_mesh](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 

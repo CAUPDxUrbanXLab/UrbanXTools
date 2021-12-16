@@ -6,7 +6,6 @@
 
 ##  **Content**
   * Add curve boundary in Exposure Rate 3D
-  * Add Centerline extraction
   * Improve the efficiency of network analysis 3D
 
 ##  **Content**

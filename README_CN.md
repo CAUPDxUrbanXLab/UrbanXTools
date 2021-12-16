@@ -4,6 +4,11 @@
 [中文]
 [Engilish](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/README.md)
 
+##  **更新**
+  * 增加三维实现曝光率选择范围
+  * 增加道路中心提取方式
+  * 提升道路网计算效率
+
 ##  **目录**
   * [**介绍**](#介绍)
   * [**安装步骤**](#安装步骤)

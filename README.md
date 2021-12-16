@@ -5,6 +5,11 @@
 [Engilish]
 
 ##  **Content**
+  * Add curve boundary in Exposure Rate 3D
+  * Add Centerline extraction
+  * Improve the efficiency of network analysis 3D
+
+##  **Content**
   * [**Introduction**](#Introduction)
   * [**Installation**](#Installation)
   * [**Samples**](#Samples)
@@ -27,7 +32,7 @@
 ### 4. Translating Contributor
 - Yihan Zhang
 ### 5. Notifications
-- Rhino version 6.14 and above are recommended. 
+- Rhino version 6.9 and above are recommended. 
 - Model unit MUST BE METER, and models cannot be generated if your model unit is millimeter (mm)
 - Please put your geometric objects, such as roads and land parcels, near the origin of coordinates (0, 0, 0). Confined by computation accuracy of geometric objects in RhinoCommon, the geometric Boolean operation might go wrong if you put your model too faraway from the origin point.
 - If you encounter any other problems or have any demands and suggestions, please let us know via Github Issues. We'll try our best to help.
@@ -50,11 +55,11 @@
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_000.png)
 
 - Within the Releases page, please download:
-	- Full version: UrbanXTools_v3.0.0 is recommended
+	- Full version: UrbanXTools_v3.0.1 is recommended
 	
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/releaseVersion.png)
 
-- Extract the zip file: UrbanXTools_v3.0.0
+- Extract the zip file: UrbanXTools_v3.0.1
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_002.png)
 
@@ -64,15 +69,15 @@
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003.png)
 
-- Copy and paste the whole UrbanXTools_v3.0.0 folder here
+- Copy and paste the whole UrbanXTools_v3.0.1 folder here
 - If you already have UrbanXTools_v.1.0.0 or UrbanXTools_v.2.0.0 in this folder, please delete them in advance.
 
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_003_1.png)
 
-### 3. Check your UrbanXTools_v3.0.0 folder and then restart Rhino
+### 3. Check your UrbanXTools_v3.0.1 folder and then restart Rhino
 
-- Make sure every file listed below are also in your UrbanXTools_v3.0.0 folder
+- Make sure every file listed below are also in your UrbanXTools_v3.0.1 folder
 
 ![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B_004.png)
 

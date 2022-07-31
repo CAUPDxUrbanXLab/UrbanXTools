@@ -87,7 +87,7 @@
 
 ## **示例**
 ### 1. 网络结构分析
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84%E8%AE%A1%E7%AE%97%E6%BC%94%E7%A4%BA.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/1_%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84.png)
 
 [案例: NetworkAnalysis](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/1_NetworkAnalysis)
 
@@ -99,11 +99,11 @@
 ### 3. 城市设计方案自动生成
 - 居住建筑
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E4%BD%8F%E5%AE%85%E8%A1%8C%E5%88%97%E5%BC%8F%2B%E7%82%B9%E5%BC%8F.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/3_ResidentalAutoGeneration.png)
 
 - 商业建筑+仓库+工业建筑
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BC%94%E7%A4%BA_%E5%95%86%E4%B8%9A%2B%E4%BB%93%E5%82%A8%2B%E5%B7%A5%E5%8E%82.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/4_BusniessAutoGeneration.png)
 
 [案例: UrbanDesign SingleSite](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/3_UrbanDesign)
 
@@ -111,7 +111,7 @@
 
 ### 4. 公共服务设施覆盖分析
 
-![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/%E8%B5%84%E6%BA%90%E8%8D%B7%E8%BD%BD.gif)
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/2_FacilityCoverage.png)
 
 [案例: FacilityLocation](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/2_FacilityLocation)
 

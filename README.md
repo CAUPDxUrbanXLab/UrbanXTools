@@ -148,6 +148,11 @@
 
 [Sample: ExposureRates3D_visualGraphNetwork](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/Samples/5_SpatialAnalysis)
 
+### 10. Extract CentroidLine of Road Network
+
+![image](https://github.com/CAUPDxUrbanXLab/UrbanXTools/blob/main/images/9_extractCentroidLine.png)
+
+[案例: CentroidLineExtraction](https://github.com/CAUPDxUrbanXLab/UrbanXTools/tree/main/Samples/7_CentroidLineExtraction)
 
 ## **Tools**
 

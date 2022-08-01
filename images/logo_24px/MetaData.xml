@@ -395,6 +395,25 @@
 				<output id="0"  name="RefinedSiteParameters" nickname="RefinedSiteParameters" description="A list of refined site parameters for all the sites."/>
 			</outputs>
 		</component>
+
+
+
+		<component>
+			<id>UrbanDesign_SiteTrees</id>
+			<name>UD_SiteTrees</name>
+			<nickname>SiteTrees</nickname>
+			<description>Generating trees for input site.</description>
+			<category>UrbanX</category>
+			<subCategory>3_UrbanDesign</subCategory>
+			<inputs>
+				<input id="0" name="Site" nickname="Site" description="Input site."/>
+				<input id="1" name="TreeAreaRatio" nickname="Ratio" description="The ratio between trees area to site area."/>
+			</inputs>
+			<outputs>
+				<output id="0"  name="TreesPoint" nickname="Point" description="The centroids for locating trees."/>
+				<output id="1"  name="TreesRadius" nickname="Radius" description="The radius for trees."/>
+			</outputs>
+		</component>
 		
 
 	</module>

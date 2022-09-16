@@ -590,7 +590,7 @@ VisibilityAnalysis_VisualCalc
 
 VisibilityAnalysis_VisualSyntaxComputing
 - **目的**：
-    - 基于输入的道路网和三维层面上其对应的可视性属性进行可视网络分析
+    - 基于输入的道路网和三维层面上其对应的可视性属性进行可视网络分析，可用于去寻找信息最多路径。因此，该模块被称为三维空间信息可视率计算。
 - **输入**：
     - 清洗后的道路网，从VisibilityAnalysis_VisualCalc组件中获取
     - 各道路对应的可视性属性

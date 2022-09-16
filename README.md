@@ -585,7 +585,7 @@ VisibilityAnalysis_ExposureRate3DMesh
 
 VisibilityAnalysis_VisualCalc
 - **Purpose**:
-    - Compute the visibility of road network by interpolating points in 3D context
+    - Compute the visibility of road network by interpolating points in 3D context. 
 - **Input**:
     - Preset road network
     - GenerateMesh Class
@@ -603,7 +603,7 @@ VisibilityAnalysis_VisualCalc
 
 VisibilityAnalysis_VisualSyntaxComputing
 - **Purpose**: 
-    - Compute visual graph network analysis by input road network and corresponding scores in 3D context
+    - Compute visual graph network analysis by input road network and corresponding scores in 3D context, which could be used to find out the most informative route. Thus, this application is called 3D Informative Visualization
 - **Input**: 
     - Cleaned roads, obtained from the VisibilityAnalysis_VisualCalc component
     - Corresponding scores of each road

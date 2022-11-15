@@ -241,7 +241,7 @@ RegulatoryPlanning_GeneratingSites
 
 RegulatoryPlanning_ClusteringBlocks
 - **目的**：
-    - 基于层次聚类算法及最短路径距离矩阵，对地块进行聚类
+    - 基于层次聚类算法及最短路径距离矩阵，对地块进行聚类，确保各组地块之间最大路径距离不超过所设定的服务半径
 - **输入**：
     - 道路中心线
     - 地块
@@ -257,7 +257,7 @@ RegulatoryPlanning_ClusteringBlocks
 
 RegulatoryPlanning_ClusteringPoints
 - **目的**：
-    - 基于层次聚类算法及各地块中心点之间的直线距离矩阵，对地块进行聚类
+    - 基于层次聚类算法及各地块中心点之间的直线距离矩阵，对地块进行聚类，确保各组中心点之间最大直线距离不超过所设定的服务半径
 - **输入**：
     - 各地块的中心点
     - 各等级生活圈的服务半径
